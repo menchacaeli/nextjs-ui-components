@@ -1,0 +1,191 @@
+/* button.css */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-medium);
+    transition: var(--transition-base);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Size variants - Added XXS, XS, and XL */
+.btn--xxs {
+    padding: calc(var(--spacing-1) / 2) var(--spacing-1);
+    font-size: calc(var(--font-size-xs) * 0.875);
+}
+
+.btn--xs {
+    padding: var(--spacing-1) var(--spacing-1);
+    font-size: var(--font-size-xs);
+}
+
+.btn--small {
+    padding: var(--spacing-1) var(--spacing-2);
+    font-size: var(--font-size-sm);
+}
+
+.btn--medium {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-base);
+}
+
+.btn--large {
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: var(--font-size-lg);
+}
+
+.btn--xl {
+    padding: var(--spacing-4) var(--spacing-8);
+    font-size: var(--font-size-xl);
+}
+
+/* Shape variants */
+.btn--rounded {
+    border-radius: var(--radius-full);
+}
+
+.btn--default {
+    border-radius: var(--radius-base);
+}
+
+/* New shape variants */
+.btn--pill {
+    border-radius: var(--radius-2xl);
+}
+
+.btn--sharp {
+    border-radius: 0;
+}
+
+/* Style variants - Added new variants */
+.btn--primary {
+    background-color: var(--color-primary-600);
+    color: white;
+}
+
+.btn--primary:hover:not(:disabled) {
+    background-color: var(--color-primary-700);
+}
+
+.btn--glass {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: var(--color-neutral-900);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn--glass:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn--gradient {
+    background: linear-gradient(45deg, var(--color-primary-600), var(--color-info));
+    color: white;
+}
+
+.btn--gradient:hover:not(:disabled) {
+    background: linear-gradient(45deg, var(--color-primary-700), var(--color-primary-600));
+}
+
+.btn--warning {
+    background-color: var(--color-warning);
+    color: white;
+}
+
+.btn--warning:hover:not(:disabled) {
+    filter: brightness(90%);
+}
+
+.btn--info {
+    background-color: var(--color-info);
+    color: white;
+}
+
+.btn--info:hover:not(:disabled) {
+    filter: brightness(90%);
+}
+
+/* Previous variants remain... */
+
+/* Click Animation Variants */
+.btn--ripple {
+    position: relative;
+}
+
+.btn--ripple .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: ripple 0.6s linear;
+    transform: scale(0);
+}
+
+.btn--scale:active:not(:disabled) {
+    transform: scale(0.96);
+}
+
+.btn--bounce:active:not(:disabled) {
+    animation: bounce 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.btn--shine {
+    position: relative;
+}
+
+.btn--shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.btn--shine:hover::before {
+    animation: shine 0.75s;
+}
+
+.btn--pulse:hover:not(:disabled) {
+    animation: pulse 1.5s infinite;
+}
+
+/* Animations */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.96); }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
