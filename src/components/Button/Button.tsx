@@ -7,7 +7,7 @@ const Button = (props: ButtonProps) => {
   const {
     text = 'Button',
     variant = 'primary',
-    size = 'medium',
+    size = 'md',
     isLoading = false,
     animation = '',
     shape = 'default',
@@ -55,7 +55,7 @@ const Button = (props: ButtonProps) => {
       type="button"
       {...props}
     >
-      {isLoading && <div className="btn__loader" />}
+      {isLoading && <div className={`btn--spinner btn--spinner-${size}`} />}&nbsp;
       {text}
       {animation === 'ripple' && ripples.map(ripple => (
         <span

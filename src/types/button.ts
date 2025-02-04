@@ -1,5 +1,5 @@
 // Theme-related types
-export type ThemeSize = 'xxs' | 'xs' | 'small' | 'medium' | 'large' | 'xl';
+export type ThemeSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export type ThemeVariant =
   | 'primary'

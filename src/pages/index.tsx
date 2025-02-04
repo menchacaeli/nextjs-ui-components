@@ -6,8 +6,7 @@ export default function Home() {
       <Button
         text="Click me"
         variant="primary"
-        size="medium"
-        isLoading
+        size="lg"
         onClick={() => console.log('Button clicked')}
       />
     </div>
