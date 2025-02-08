@@ -11,12 +11,7 @@
     overflow: hidden;
 }
 
-/* Size variants - Added XXS, XS, and XL */
-.btn--xxs {
-    padding: calc(var(--spacing-1) / 2) var(--spacing-1);
-    font-size: calc(var(--font-size-xs) * 0.875);
-}
-
+/* SIZE VARIANTS */
 .btn--xs {
     padding: var(--spacing-1) var(--spacing-1);
     font-size: var(--font-size-xs);
@@ -60,7 +55,7 @@
     border-radius: 0;
 }
 
-/* Style variants - Added new variants */
+/* STYLE VARIANTS */
 .btn--primary {
     background-color: var(--color-primary-600);
     color: white;
@@ -70,24 +65,50 @@
     background-color: var(--color-primary-700);
 }
 
-.btn--glass {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    color: var(--color-neutral-900);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn--glass:hover:not(:disabled) {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.btn--gradient {
-    background: linear-gradient(45deg, var(--color-primary-600), var(--color-info));
+.btn--secondary {
+    background-color: var(--color-secondary-600);
     color: white;
 }
 
-.btn--gradient:hover:not(:disabled) {
-    background: linear-gradient(45deg, var(--color-primary-700), var(--color-primary-600));
+.btn--secondary:hover:not(:disabled) {
+    background-color: var(--color-secondary-700);
+}
+
+.btn--success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.btn--success:hover:not(:disabled) {
+    filter: brightness(90%);
+}
+
+.btn--danger {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+.btn--danger:hover:not(:disabled) {
+    filter: brightness(90%);
+}
+
+.btn--outline {
+    background-color: transparent;
+    color: var(--color-neutral-900);
+    border: 1px solid var(--color-neutral-900);
+}
+
+.btn--outline:hover:not(:disabled) {
+    background-color: var(--color-neutral-50);
+}
+
+.btn--ghost {
+    background-color: transparent;
+    color: var(--color-neutral-900);
+}
+
+.btn--ghost:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .btn--warning {
@@ -108,56 +129,22 @@
     filter: brightness(90%);
 }
 
-/* Previous variants remain... */
-
 /* Click Animation Variants */
 .btn--ripple {
-    position: relative;
+    transform: translate3d(0, 0, 0);
 }
 
-.btn--ripple .ripple {
+.ripple {
     position: absolute;
+    pointer-events: none;
+    background-color: var(--color-neutral-50);
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    animation: ripple 0.6s linear;
-    transform: scale(0);
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 0.75s ease-out;
 }
 
 .btn--scale:active:not(:disabled) {
     transform: scale(0.96);
-}
-
-.btn--bounce:active:not(:disabled) {
-    animation: bounce 0.3s ease-in-out;
-}
-
-/* Hover Effects */
-.btn--shine {
-    position: relative;
-}
-
-.btn--shine::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.3) 100%
-    );
-    transform: skewX(-25deg);
-    transition: none;
-}
-
-.btn--shine:hover::before {
-    animation: shine 0.75s;
-}
-
-.btn--pulse:hover:not(:disabled) {
-    animation: pulse 1.5s infinite;
 }
 
 /* Loading Spinner */
@@ -192,29 +179,32 @@
 /* Animations */
 @keyframes ripple {
     to {
-        transform: scale(4);
+        transform: scale(2.5);
         opacity: 0;
     }
 }
 
-@keyframes bounce {
+@keyframes scale {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(0.96); }
-}
-
-@keyframes shine {
-    100% {
-        left: 125%;
-    }
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }

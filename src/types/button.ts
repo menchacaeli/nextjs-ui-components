@@ -1,15 +1,13 @@
 // Theme-related types
-export type ThemeSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type ThemeSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export type ThemeVariant =
   | 'primary'
   | 'secondary'
   | 'success'
-  | 'error'
+  | 'danger'
   | 'outline'
   | 'ghost'
-  | 'glass'
-  | 'gradient'
   | 'warning'
   | 'info';
 
@@ -22,9 +20,6 @@ export type ThemeShape =
 export type AnimationType =
   | 'ripple'
   | 'scale'
-  | 'bounce'
-  | 'shine'
-  | 'pulse'
   | '';
 
 // Ripple effect type

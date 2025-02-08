@@ -20,23 +20,27 @@ const Button = (props: ButtonProps) => {
 
   const handleClick = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
     if (animation === 'ripple') {
-      const button = event.currentTarget;
-      const rect = button.getBoundingClientRect();
-      const ripple: Ripple = {
-        x: event.clientX - rect.left,
-        y: event.clientY - rect.top,
-        id: Date.now()
-      };
-
-      setRipples(prev => [...prev, ripple]);
-
-      setTimeout(() => {
-        setRipples(prev => prev.filter(r => r.id !== ripple.id));
-      }, 600);
+      rippleEffect(event);
     }
 
     onClick?.(event);
   }, [animation, onClick]);
+
+  const rippleEffect = (event: React.MouseEvent<HTMLButtonElement>)=> {
+    const button = event.currentTarget;
+    const rect = button.getBoundingClientRect();
+    const ripple: Ripple = {
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top,
+      id: Date.now()
+    };
+
+    setRipples(prev => [...prev, ripple]);
+
+    setTimeout(() => {
+      setRipples(prev => prev.filter(r => r.id !== ripple.id));
+    }, 600);
+  }
 
   const buttonClasses = [
     'btn',

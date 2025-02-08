@@ -11,6 +11,18 @@
     --color-primary-800: #075985;
     --color-primary-900: #0c4a6e;
 
+    /* Secondary Colors */
+    --color-secondary-50: #fdf2f8;
+    --color-secondary-100: #fce7f3;
+    --color-secondary-200: #fbcfe8;
+    --color-secondary-300: #f9a8d4;
+    --color-secondary-400: #f472b6;
+    --color-secondary-500: #ec4899;
+    --color-secondary-600: #db2777;
+    --color-secondary-700: #be185d;
+    --color-secondary-800: #9d174d;
+    --color-secondary-900: #831843;
+
     /* Neutral Colors */
     --color-neutral-50: #f8fafc;
     --color-neutral-100: #f1f5f9;
@@ -26,7 +38,7 @@
     /* Semantic Colors */
     --color-success: #22c55e;
     --color-warning: #f59e0b;
-    --color-error: #ef4444;
+    --color-danger: #ef4444;
     --color-info: #3b82f6;
 
     /* Typography */
