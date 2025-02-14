@@ -1,26 +1,21 @@
+import { LucideIcon } from "lucide-react";
+
 // Theme-related types
-export type ThemeSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type ThemeSize = "xs" | "sm" | "md" | "lg" | "xl";
 
 export type ThemeVariant =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'danger'
-  | 'outline'
-  | 'ghost'
-  | 'warning'
-  | 'info';
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "outline"
+  | "ghost"
+  | "warning"
+  | "info";
 
-export type ThemeShape =
-  | 'default'
-  | 'rounded'
-  | 'pill'
-  | 'sharp';
+export type ThemeShape = "default" | "rounded" | "pill" | "sharp";
 
-export type AnimationType =
-  | 'ripple'
-  | 'scale'
-  | '';
+export type AnimationType = "ripple" | "scale" | "";
 
 // Ripple effect type
 export interface Ripple {
@@ -30,7 +25,7 @@ export interface Ripple {
 }
 
 // Main button props interface
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** The text content of the button */
   text?: string;
 
@@ -51,4 +46,10 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 
   /** Additional CSS classes to apply to the button */
   className?: string;
+}
+
+export interface ExtendedButtonProps extends ButtonProps {
+  leadingIcon?: LucideIcon;
+  trailingIcon?: LucideIcon;
+  iconOnly?: boolean;
 }

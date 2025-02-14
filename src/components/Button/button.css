@@ -1,4 +1,3 @@
-/* button.css */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -37,16 +36,15 @@
     font-size: var(--font-size-xl);
 }
 
-/* Shape variants */
+/* SHAPE VARIANTS */
 .btn--rounded {
-    border-radius: var(--radius-full);
+    border-radius: calc(infinity * 1px);
 }
 
 .btn--default {
     border-radius: var(--radius-base);
 }
 
-/* New shape variants */
 .btn--pill {
     border-radius: var(--radius-2xl);
 }
@@ -129,7 +127,35 @@
     filter: brightness(90%);
 }
 
-/* Click Animation Variants */
+.btn--icon-only {
+    padding: var(--spacing-3);
+}
+
+/* ICON */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* ICON SIZE VARIANTS */
+.btn-icon--sm {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-icon--md {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-icon--lg {
+    width: 24px;
+    height: 24px;
+}
+
+/* CLICK ANIMATION VARIANTS */
 .btn--ripple {
     transform: translate3d(0, 0, 0);
 }
@@ -147,7 +173,7 @@
     transform: scale(0.96);
 }
 
-/* Loading Spinner */
+/* LOADING SPINNER */
 .btn--spinner {
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-left-color: var(--color-neutral-50);
@@ -170,13 +196,13 @@
     height: 1.25rem;
 }
 
-/* Disabled State */
+/* DISABLED STATE */
 .btn:disabled {
     cursor: not-allowed;
     opacity: 0.5;
 }
 
-/* Animations */
+/* ANIMATIONS */
 @keyframes ripple {
     to {
         transform: scale(2.5);
