@@ -1,116 +1,155 @@
 import { Button } from "@/components";
-import { BikeIcon, FishIcon, MailIcon, Send } from "lucide-react";
+import { ChevronRight, Mail } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="app-home bg-gray-100 h-screen flex flex-col p-24 justify-center space-y-4">
-      <div className="space-x-4">
-        <Button
-          leadingIcon={Send}
-          size="lg"
-          iconOnly
-          aria-label="Send message"
-        />
-        <Button leadingIcon={Send} iconOnly aria-label="Send message" />
-        <Button
-          leadingIcon={Send}
-          iconOnly
-          size="sm"
-          aria-label="Send message"
-        />
-      </div>
-      <div className="space-x-4">
-        <Button
-          leadingIcon={Send}
-          shape="rounded"
-          size="lg"
-          iconOnly
-          aria-label="Send message"
-        />
-        <Button
-          leadingIcon={Send}
-          shape="rounded"
-          iconOnly
-          aria-label="Send message"
-        />
-        <Button
-          leadingIcon={Send}
-          shape="rounded"
-          iconOnly
-          size="sm"
-          aria-label="Send message"
-        />
-      </div>
-      <div className="space-x-4">
-        <Button
-          size="lg"
-          text="Button"
-          variant="primary"
-          animation="ripple"
-          leadingIcon={MailIcon}
-        />
-        <Button
-          text="Button"
-          variant="secondary"
-          animation="scale"
-          leadingIcon={BikeIcon}
-        />
-        <Button
-          size="sm"
-          text="Button"
-          variant="success"
-          isLoading
-          leadingIcon={FishIcon}
-        />
-      </div>
+    <div className="min-h-screen bg-gray-50 p-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">Buttons</h1>
+          <p className="mt-2 text-gray-500">
+            A collection of button styles and variants.
+          </p>
+        </div>
 
-      <div className="space-x-4">
-        <Button
-          size="lg"
-          text="Button"
-          variant="primary"
-          animation="ripple"
-          trailingIcon={MailIcon}
-        />
-        <Button
-          text="Button"
-          variant="secondary"
-          animation="scale"
-          isLoading
-          trailingIcon={BikeIcon}
-        />
-        <Button
-          size="sm"
-          text="Button"
-          variant="success"
-          trailingIcon={FishIcon}
-        />
-      </div>
+        <div className="w-full">
+          {/* Primary Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Primary</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Primary actions that stand out.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Button text={"Button text"} variant="primary" />
+                <Button text={"Disabled"} variant="primary" disabled />
+                <Button
+                  text={"Button text"}
+                  variant="primary"
+                  leadingIcon={Mail}
+                />
+                <Button
+                  text={"Button text"}
+                  variant="primary"
+                  trailingIcon={ChevronRight}
+                />
+                <Button text={"Button text"} variant="primary" isLoading />
+              </div>
+            </div>
+          </div>
 
-      <div className="space-x-4">
-        <Button text="Button" variant="primary" shape="rounded" />
-        <Button text="Button" variant="secondary" shape="pill" />
-        <Button text="Button" variant="success" shape="sharp" />
-        <Button text="Button" variant="danger" shape="default" />
-      </div>
+          {/* Secondary Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Secondary</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Secondary actions with less emphasis.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Button text={"Button text"} variant="secondary" />
+                <Button text={"Disabled"} variant="secondary" disabled />
+                <Button
+                  text={"Button text"}
+                  variant="secondary"
+                  leadingIcon={Mail}
+                />
+                <Button
+                  text={"Button text"}
+                  variant="secondary"
+                  trailingIcon={ChevronRight}
+                />
+                <Button text={"Button text"} variant="secondary" isLoading />
+              </div>
+            </div>
+          </div>
 
-      <div className="space-x-4">
-        <Button text="Button XL" variant="primary" size="xl" />
-        <Button text="Button LG" variant="secondary" size="lg" />
-        <Button text="Button MD" variant="success" size="md" />
-        <Button text="Button SM" variant="danger" size="sm" />
-        <Button text="Button XS" variant="warning" size="xs" />
-      </div>
+          {/* Ghost Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Ghost</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Ghost visual style with actions.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Button text={"Button text"} variant="ghost" />
+                <Button text={"Disabled"} variant="ghost" disabled />
+                <Button
+                  text={"Button text"}
+                  variant="ghost"
+                  leadingIcon={Mail}
+                />
+                <Button
+                  text={"Button text"}
+                  variant="ghost"
+                  trailingIcon={ChevronRight}
+                />
+                <Button text={"Button text"} variant="ghost" isLoading />
+              </div>
+            </div>
+          </div>
 
-      <div className="space-x-4">
-        <Button text="Button" variant="primary" />
-        <Button text="Button" variant="secondary" />
-        <Button text="Button" variant="success" />
-        <Button text="Button" variant="danger" />
-        <Button text="Button" variant="warning" />
-        <Button text="Button" variant="info" />
-        <Button text="Button" variant="outline" />
-        <Button text="Button" variant="ghost" />
+          {/* Sizes Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Sizes</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Different button sizes for various contexts.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap items-center gap-4">
+                <Button text={"Extra Small"} size="xs" />
+                <Button text={"Small"} size="sm" />
+                <Button text={"Medium"} size="md" />
+                <Button text={"Large"} size="lg" />
+              </div>
+            </div>
+          </div>
+
+          {/* Shapes Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Shapes</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Different button corner styles.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap items-center gap-4">
+                <Button text={"Default"} shape="default" />
+                <Button text={"Rounded"} shape="rounded" />
+                <Button text={"Pill"} shape="pill" />
+                <Button text={"Sharp"} shape="sharp" />
+              </div>
+            </div>
+          </div>
+
+          {/* Animation Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Animations</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Button animations on click.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap items-center gap-4">
+                <Button text={"Ripple"} animation="ripple" />
+                <Button text={"Scale"} animation="scale" />
+              </div>
+            </div>
+          </div>
+
+          {/* Icon-only Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Icon-only</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Buttons with only icons.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap items-center gap-4">
+                <Button iconOnly leadingIcon={Mail} />
+                <Button iconOnly leadingIcon={ChevronRight} shape={"rounded"} />
+                <Button iconOnly leadingIcon={Mail} shape={"pill"} />
+                <Button iconOnly leadingIcon={ChevronRight} shape={"sharp"} />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
