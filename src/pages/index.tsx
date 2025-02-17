@@ -1,7 +1,10 @@
-import { Button } from "@/components";
+import { Button, Avatar } from "@/components";
 import { ChevronRight, Mail } from "lucide-react";
 
 export default function Home() {
+  // for demo purposes
+  const avatarImage =
+    "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3161&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   return (
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-5xl mx-auto">
@@ -195,6 +198,65 @@ export default function Home() {
                   leadingIcon={ChevronRight}
                   shape={"sharp"}
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">Avatar</h1>
+          <p className="mt-2 text-gray-500">
+            A collection of avatar styles and variants.
+          </p>
+        </div>
+
+        <div className="w-full">
+          {/* Avatar Sizes Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Sizes</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Different avatar sizes for various contexts.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Avatar src={avatarImage} size="xs" />
+                <Avatar src={avatarImage} size="sm" />
+                <Avatar src={avatarImage} size="md" />
+                <Avatar src={avatarImage} size="lg" />
+              </div>
+            </div>
+          </div>
+
+          {/* Avatar Status Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Status</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Avatars with status indicators for user presence.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Avatar src={avatarImage} status="online" />
+                <Avatar src={avatarImage} status="offline" />
+                <Avatar src={avatarImage} status="away" />
+                <Avatar src={avatarImage} status="busy" />
+              </div>
+            </div>
+          </div>
+
+          {/* Avatar Initials Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Initials</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Avatars with initials for user profiles.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Avatar initials="JD" />
+                <Avatar initials="LM" />
+                <Avatar initials="AB" />
+                <Avatar initials="CD" />
               </div>
             </div>
           </div>
