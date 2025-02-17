@@ -1,13 +1,14 @@
 import React, { useCallback, useState } from "react";
-import { ExtendedButtonProps, Ripple } from "@/types/button";
+import { ButtonProps, Ripple } from "@/types/button";
 import "./button.css";
 
-const Button = (props: ExtendedButtonProps) => {
+const Button = (props: ButtonProps) => {
   const {
     text = "Button",
-    variant = "primary",
+    variant = "filled",
+    color = "primary",
     size = "md",
-    isLoading = false,
+    loading = false,
     animation = "",
     shape = "default",
     onClick,
@@ -49,11 +50,12 @@ const Button = (props: ExtendedButtonProps) => {
 
   const buttonClasses = [
     "btn",
-    `btn--${variant}`,
+    `btn--${variant}-${color}`,
     `btn--${size}`,
     `btn--${shape}`,
     animation && `btn--${animation}`,
     iconOnly && "btn--icon-only",
+    loading && "btn--loading",
     className,
   ]
     .filter(Boolean)
@@ -64,12 +66,10 @@ const Button = (props: ExtendedButtonProps) => {
     .join(" ");
 
   const renderContent = () => {
-    if (isLoading) {
+    if (loading) {
       return (
         <>
-          <div
-            className={`btn--spinner btn--spinner-${size} ${!iconOnly ? "mr-2" : ""}`}
-          />
+          <div className={`btn--spinner btn--spinner-${size}`} />
           {!iconOnly && "Loading..."}
         </>
       );
@@ -82,11 +82,17 @@ const Button = (props: ExtendedButtonProps) => {
     return (
       <>
         {LeadingIcon && (
-          <LeadingIcon className={`${iconClasses} mr-2`} aria-hidden="true" />
+          <LeadingIcon
+            className={`${iconClasses} leading-icon`}
+            aria-hidden="true"
+          />
         )}
         {text}
         {TrailingIcon && (
-          <TrailingIcon className={`${iconClasses} ml-2`} aria-hidden="true" />
+          <TrailingIcon
+            className={`${iconClasses} trailing-icon`}
+            aria-hidden="true"
+          />
         )}
       </>
     );
@@ -95,7 +101,7 @@ const Button = (props: ExtendedButtonProps) => {
   return (
     <button
       className={buttonClasses}
-      disabled={isLoading || disabled}
+      disabled={loading || disabled}
       onClick={handleClick}
       type="button"
       {...props}

@@ -13,77 +13,127 @@ export default function Home() {
         </div>
 
         <div className="w-full">
-          {/* Primary Section */}
+          {/* Button Colors Section */}
           <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Primary</h2>
+            <h2 className="font-semibold text-gray-900 mb-2">Colors</h2>
             <p className="text-sm text-gray-500 mb-4">
-              Primary actions that stand out.
+              A showcase of all available button colors.
             </p>
             <div className="bg-white rounded-lg border border-gray-200 p-4">
               <div className="flex flex-wrap gap-4">
-                <Button text={"Button text"} variant="primary" />
-                <Button text={"Disabled"} variant="primary" disabled />
+                <Button text={"Primary"} variant="filled" color={"primary"} />
                 <Button
-                  text={"Button text"}
-                  variant="primary"
-                  leadingIcon={Mail}
+                  text={"Secondary"}
+                  variant="filled"
+                  color={"secondary"}
                 />
-                <Button
-                  text={"Button text"}
-                  variant="primary"
-                  trailingIcon={ChevronRight}
-                />
-                <Button text={"Button text"} variant="primary" isLoading />
+                <Button text={"Danger"} variant="filled" color={"danger"} />
+                <Button text={"Warning"} variant="filled" color={"warning"} />
+                <Button text={"Success"} variant="filled" color={"success"} />
+                <Button text={"Info"} variant="filled" color={"info"} />
               </div>
             </div>
           </div>
 
-          {/* Secondary Section */}
+          {/* Button Outlined Colors Section */}
           <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Secondary</h2>
+            <h2 className="font-semibold text-gray-900 mb-2">
+              Outlined Colors
+            </h2>
             <p className="text-sm text-gray-500 mb-4">
-              Secondary actions with less emphasis.
+              A showcase of all available outlined button colors.
             </p>
             <div className="bg-white rounded-lg border border-gray-200 p-4">
               <div className="flex flex-wrap gap-4">
-                <Button text={"Button text"} variant="secondary" />
-                <Button text={"Disabled"} variant="secondary" disabled />
+                <Button text={"Primary"} variant="outlined" color={"primary"} />
                 <Button
-                  text={"Button text"}
-                  variant="secondary"
-                  leadingIcon={Mail}
+                  text={"Secondary"}
+                  variant="outlined"
+                  color={"secondary"}
                 />
-                <Button
-                  text={"Button text"}
-                  variant="secondary"
-                  trailingIcon={ChevronRight}
-                />
-                <Button text={"Button text"} variant="secondary" isLoading />
+                <Button text={"Danger"} variant="outlined" color={"danger"} />
+                <Button text={"Warning"} variant="outlined" color={"warning"} />
+                <Button text={"Success"} variant="outlined" color={"success"} />
+                <Button text={"Info"} variant="outlined" color={"info"} />
               </div>
             </div>
           </div>
 
-          {/* Ghost Section */}
+          {/* Button Variants */}
           <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Ghost</h2>
+            <h2 className="font-semibold text-gray-900 mb-2">Variants</h2>
             <p className="text-sm text-gray-500 mb-4">
-              Ghost visual style with actions.
+              Explore different visual styles for buttons.
             </p>
             <div className="bg-white rounded-lg border border-gray-200 p-4">
               <div className="flex flex-wrap gap-4">
-                <Button text={"Button text"} variant="ghost" />
-                <Button text={"Disabled"} variant="ghost" disabled />
+                <Button text={"Filled"} variant="filled" />
+                <Button text={"Gradient"} variant="gradient" />
+                <Button text={"Outlined"} variant="outlined" />
+                <Button text={"Ghost"} variant="ghost" />
+              </div>
+            </div>
+          </div>
+
+          {/* Shapes Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Shapes</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Explore different button corner styles.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap items-center gap-4">
+                <Button text={"Default"} shape="default" />
+                <Button text={"Rounded"} shape="rounded" />
+                <Button text={"Pill"} shape="pill" />
+                <Button text={"Sharp"} shape="sharp" />
+              </div>
+            </div>
+          </div>
+
+          {/* Loading Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Loading</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Buttons with loading indicators for actions.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Button text={"Button text"} loading />
+                <Button text={"Button text"} shape={"rounded"} loading />
+                <Button text={"Button text"} shape={"pill"} loading />
+                <Button text={"Button text"} shape={"sharp"} loading />
+              </div>
+            </div>
+          </div>
+
+          {/* Icons Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">With Icon</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              Buttons with icons for enhanced visual cues.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Button text={"Button text"} leadingIcon={Mail} />
                 <Button
                   text={"Button text"}
-                  variant="ghost"
+                  variant={"gradient"}
+                  shape={"rounded"}
+                  trailingIcon={Mail}
+                />
+                <Button
+                  text={"Button text"}
+                  variant={"outlined"}
+                  shape={"pill"}
                   leadingIcon={Mail}
                 />
                 <Button
                   text={"Button text"}
-                  variant="ghost"
-                  trailingIcon={ChevronRight}
+                  variant={"ghost"}
+                  shape={"sharp"}
+                  trailingIcon={Mail}
                 />
-                <Button text={"Button text"} variant="ghost" isLoading />
               </div>
             </div>
           </div>
@@ -104,27 +154,11 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Shapes Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Shapes</h2>
-            <p className="text-sm text-gray-500 mb-4">
-              Different button corner styles.
-            </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
-              <div className="flex flex-wrap items-center gap-4">
-                <Button text={"Default"} shape="default" />
-                <Button text={"Rounded"} shape="rounded" />
-                <Button text={"Pill"} shape="pill" />
-                <Button text={"Sharp"} shape="sharp" />
-              </div>
-            </div>
-          </div>
-
           {/* Animation Section */}
           <div className="border-b border-gray-200 pb-10 mb-10">
             <h2 className="font-semibold text-gray-900 mb-2">Animations</h2>
             <p className="text-sm text-gray-500 mb-4">
-              Button animations on click.
+              Button animations for interactive feedback.
             </p>
             <div className="bg-white rounded-lg border border-gray-200 p-4">
               <div className="flex flex-wrap items-center gap-4">
@@ -138,14 +172,29 @@ export default function Home() {
           <div className="border-b border-gray-200 pb-10 mb-10">
             <h2 className="font-semibold text-gray-900 mb-2">Icon-only</h2>
             <p className="text-sm text-gray-500 mb-4">
-              Buttons with only icons.
+              Buttons with only icons for compact actions.
             </p>
             <div className="bg-white rounded-lg border border-gray-200 p-4">
               <div className="flex flex-wrap items-center gap-4">
                 <Button iconOnly leadingIcon={Mail} />
-                <Button iconOnly leadingIcon={ChevronRight} shape={"rounded"} />
-                <Button iconOnly leadingIcon={Mail} shape={"pill"} />
-                <Button iconOnly leadingIcon={ChevronRight} shape={"sharp"} />
+                <Button
+                  iconOnly
+                  variant={"gradient"}
+                  leadingIcon={ChevronRight}
+                  shape={"rounded"}
+                />
+                <Button
+                  iconOnly
+                  variant={"outlined"}
+                  leadingIcon={Mail}
+                  shape={"pill"}
+                />
+                <Button
+                  iconOnly
+                  variant={"ghost"}
+                  leadingIcon={ChevronRight}
+                  shape={"sharp"}
+                />
               </div>
             </div>
           </div>
