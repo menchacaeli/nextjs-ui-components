@@ -12,7 +12,7 @@
 
 /* BUTTON SIZES */
 .btn--xs {
-    padding: var(--spacing-1) var(--spacing-1);
+    padding: var(--spacing-1) var(--spacing-2);
     font-size: var(--font-size-xs);
 }
 
