@@ -6,7 +6,7 @@
 
 .avatar {
     border-radius: 50%;
-    background-color: var(--color-primary-500);
+    background-color: var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,19 +67,19 @@
 
 /* AVATAR STATUS VARIANTS */
 .avatar-status--online {
-    background-color: var(--color-success-500);
+    background-color: var(--color-success);
 }
 
 .avatar-status--offline {
-    background-color: var(--color-neutral-400);
+    background-color: var(--color-gray);
 }
 
 .avatar-status--busy {
-    background-color: var(--color-danger-500);
+    background-color: var(--color-danger);
 }
 
 .avatar-status--away {
-    background-color: var(--color-warning-500);
+    background-color: var(--color-warning);
 }
 
 /* AVATAR STATUS SIZE VARIANTS */

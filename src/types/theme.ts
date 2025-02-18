@@ -1,4 +1,3 @@
-// Theme-related types
 export type ThemeSize = "xs" | "sm" | "md" | "lg" | "xl";
 
 export type ThemeColor =
@@ -7,4 +6,13 @@ export type ThemeColor =
   | "danger"
   | "warning"
   | "success"
-  | "info";
+  | "info"
+  | "gray"
+  | "red"
+  | "yellow"
+  | "green"
+  | "blue"
+  | "purple"
+  | "pink"
+  | "white"
+  | "black";

@@ -64,4 +64,5 @@ export interface ButtonProps
   leadingIcon?: LucideIcon;
   trailingIcon?: LucideIcon;
   iconOnly?: boolean;
+  fullWidth?: boolean;
 }

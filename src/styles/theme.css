@@ -1,27 +1,75 @@
 :root {
-    /* Color System */
-    --color-primary-50: #f5f7fa;
-    --color-primary-100: #ebeef4;
-    --color-primary-200: #d7dde8;
-    --color-primary-300: #b8c2d4;
-    --color-primary-400: #95a3bd;
-    --color-primary-500: #7485a6;
-    --color-primary-600: #576784;
-    --color-primary-700: #414d67;
-    --color-primary-800: #2e3a52;
-    --color-primary-900: #212c41;
+    /* Blue Colors */
+    --color-blue-50: #f5f7fa;
+    --color-blue-100: #ebeef4;
+    --color-blue-200: #d7dde8;
+    --color-blue-300: #b8c2d4;
+    --color-blue-400: #95a3bd;
+    --color-blue-500: #7485a6;
+    --color-blue-600: #576784;
+    --color-blue-700: #414d67;
+    --color-blue-800: #2e3a52;
+    --color-blue-900: #212c41;
 
-    /* Secondary Colors */
-    --color-secondary-50: #f7f5fa;
-    --color-secondary-100: #eeeaf4;
-    --color-secondary-200: #ded5ea;
-    --color-secondary-300: #c3b3d8;
-    --color-secondary-400: #a08ec1;
-    --color-secondary-500: #8871aa;
-    --color-secondary-600: #6b5887;
-    --color-secondary-700: #544469;
-    --color-secondary-800: #423552;
-    --color-secondary-900: #352a43;
+    /* Purple Colors */
+    --color-purple-50: #f7f5fa;
+    --color-purple-100: #eeeaf4;
+    --color-purple-200: #ded5ea;
+    --color-purple-300: #c3b3d8;
+    --color-purple-400: #a08ec1;
+    --color-purple-500: #8871aa;
+    --color-purple-600: #6b5887;
+    --color-purple-700: #544469;
+    --color-purple-800: #423552;
+    --color-purple-900: #352a43;
+
+    /* Green Colors */
+    --color-green-50: #f3faf7;
+    --color-green-100: #e4f5ee;
+    --color-green-200: #cceadd;
+    --color-green-300: #9ed3bc;
+    --color-green-400: #65b492;
+    --color-green-500: #47997a;
+    --color-green-600: #3d7d65;
+    --color-green-700: #336354;
+    --color-green-800: #2a4e43;
+    --color-green-900: #234137;
+
+    /* Amber Colors */
+    --color-amber-50: #fefaf3;
+    --color-amber-100: #fdf3e4;
+    --color-amber-200: #fbe7c9;
+    --color-amber-300: #f6d199;
+    --color-amber-400: #f0b561;
+    --color-amber-500: #e79b3a;
+    --color-amber-600: #cf7f2c;
+    --color-amber-700: #a66024;
+    --color-amber-800: #854d20;
+    --color-amber-900: #6c3f1c;
+
+    /* Red Colors */
+    --color-red-50: #fef6f6;
+    --color-red-100: #fdeaea;
+    --color-red-200: #fbd5d5;
+    --color-red-300: #f5a9a9;
+    --color-red-400: #eb7878;
+    --color-red-500: #dc5555;
+    --color-red-600: #c93d3d;
+    --color-red-700: #a62f2f;
+    --color-red-800: #8a2828;
+    --color-red-900: #722222;
+
+    /* Cyan Colors */
+    --color-cyan-50: #f5f8fa;
+    --color-cyan-100: #eaf0f5;
+    --color-cyan-200: #d5e2eb;
+    --color-cyan-300: #b3c9db;
+    --color-cyan-400: #8aa8c5;
+    --color-cyan-500: #6889ab;
+    --color-cyan-600: #526c8b;
+    --color-cyan-700: #405468;
+    --color-cyan-800: #324251;
+    --color-cyan-900: #283442;
 
     /* Neutral Colors */
     --color-neutral-50: #f8fafc;
@@ -35,56 +83,48 @@
     --color-neutral-800: #1e293b;
     --color-neutral-900: #0f172a;
 
-    /* Gradient Colors */
-    --color-success-50: #f3faf7;
-    --color-success-100: #e4f5ee;
-    --color-success-200: #cceadd;
-    --color-success-300: #9ed3bc;
-    --color-success-400: #65b492;
-    --color-success-500: #47997a;
-    --color-success-600: #3d7d65;
-    --color-success-700: #336354;
-    --color-success-800: #2a4e43;
-    --color-success-900: #234137;
+    /* Pink Colors */
+    --color-pink-50: #fdf2f8;
+    --color-pink-100: #fce8f3;
+    --color-pink-200: #f9d3e6;
+    --color-pink-300: #f4a3c7;
+    --color-pink-400: #e668a7;
+    --color-pink-500: #d94690;
+    --color-pink-600: #c53d7b;
+    --color-pink-700: #a7336a;
+    --color-pink-800: #8c2b5b;
+    --color-pink-900: #74234c;
 
-    --color-warning-50: #fefaf3;
-    --color-warning-100: #fdf3e4;
-    --color-warning-200: #fbe7c9;
-    --color-warning-300: #f6d199;
-    --color-warning-400: #f0b561;
-    --color-warning-500: #e79b3a;
-    --color-warning-600: #cf7f2c;
-    --color-warning-700: #a66024;
-    --color-warning-800: #854d20;
-    --color-warning-900: #6c3f1c;
+    /* Black and White */
+    --color-black: #000;
+    --color-white: #fff;
 
-    --color-danger-50: #fef6f6;
-    --color-danger-100: #fdeaea;
-    --color-danger-200: #fbd5d5;
-    --color-danger-300: #f5a9a9;
-    --color-danger-400: #eb7878;
-    --color-danger-500: #dc5555;
-    --color-danger-600: #c93d3d;
-    --color-danger-700: #a62f2f;
-    --color-danger-800: #8a2828;
-    --color-danger-900: #722222;
-
-    --color-info-50: #f5f8fa;
-    --color-info-100: #eaf0f5;
-    --color-info-200: #d5e2eb;
-    --color-info-300: #b3c9db;
-    --color-info-400: #8aa8c5;
-    --color-info-500: #6889ab;
-    --color-info-600: #526c8b;
-    --color-info-700: #405468;
-    --color-info-800: #324251;
-    --color-info-900: #283442;
+    /* Grayscale */
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f4f5f7;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d2d6dc;
+    --color-gray-400: #9fa6b2;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
 
     /* Semantic Colors */
-    --color-success: var(--color-success-500);
-    --color-warning: var(--color-warning-500);
-    --color-danger: var(--color-danger-500);
-    --color-info: var(--color-info-500);
+    --color-success: var(--color-green-500);
+    --color-warning: var(--color-amber-500);
+    --color-danger: var(--color-red-500);
+    --color-info: var(--color-cyan-500);
+    --color-primary: var(--color-blue-500);
+    --color-secondary: var(--color-purple-500);
+    --color-gray: var(--color-gray-600);
+    --color-red: var(--color-red-600);
+    --color-yellow: var(--color-amber-600);
+    --color-green: var(--color-green-600);
+    --color-blue: var(--color-blue-600);
+    --color-purple: var(--color-purple-600);
+    --color-pink: var(--color-pink-600);
 
     /* Typography */
     --font-family-primary: system-ui, -apple-system, sans-serif;
@@ -92,6 +132,7 @@
     --font-family-mono: 'Menlo', monospace;
 
     /* Font Sizes */
+    --font-size-2xs: 0.625rem;   /* 10px */
     --font-size-xs: 0.75rem;    /* 12px */
     --font-size-sm: 0.875rem;   /* 14px */
     --font-size-base: 1rem;     /* 16px */

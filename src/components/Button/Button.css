@@ -55,33 +55,33 @@
 
 /* BUTTON FILLED VARIANTS WITH COLOR */
 .btn--filled-primary {
-    background-color: var(--color-primary-600);
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .btn--filled-secondary {
-    background-color: var(--color-secondary-600);
-    color: white;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
 }
 
 .btn--filled-success {
     background-color: var(--color-success);
-    color: white;
+    color: var(--color-white);
 }
 
 .btn--filled-danger {
     background-color: var(--color-danger);
-    color: white;
+    color: var(--color-white);
 }
 
 .btn--filled-warning {
     background-color: var(--color-warning);
-    color: white;
+    color: var(--color-white);
 }
 
 .btn--filled-info {
     background-color: var(--color-info);
-    color: white;
+    color: var(--color-white);
 }
 
 .btn--filled-primary:hover:not(:disabled),
@@ -96,14 +96,14 @@
 /* BUTTON OUTLINE VARIANTS WITH COLOR */
 .btn--outlined-primary {
     background-color: transparent;
-    color: var(--color-primary-600);
-    border: 1px solid var(--color-primary-600);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
 }
 
 .btn--outlined-secondary {
     background-color: transparent;
-    color: var(--color-secondary-600);
-    border: 1px solid var(--color-secondary-600);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
 }
 
 .btn--outlined-success {
@@ -142,12 +142,12 @@
 /* BUTTON GHOST VARIANT WITH COLOR */
 .btn--ghost-primary {
     background-color: transparent;
-    color: var(--color-primary-600);
+    color: var(--color-primary);
 }
 
 .btn--ghost-secondary {
     background-color: transparent;
-    color: var(--color-secondary-600);
+    color: var(--color-secondary);
 }
 
 .btn--ghost-success {
@@ -181,33 +181,33 @@
 
 /* BUTTON GRADIENT VARIANT WITH COLOR */
 .btn--gradient-primary {
-    background: linear-gradient(90deg, var(--color-primary-600), var(--color-primary-500));
-    color: white;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-blue-400));
+    color: var(--color-white);
 }
 
 .btn--gradient-secondary {
-    background: linear-gradient(90deg, var(--color-secondary-600), var(--color-secondary-500));
-    color: white;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-purple-400));
+    color: var(--color-white);
 }
 
 .btn--gradient-success {
-    background: linear-gradient(90deg, var(--color-success-600), var(--color-success-500));
-    color: white;
+    background: linear-gradient(90deg, var(--color-success), var(--color-green-400));
+    color: var(--color-white);
 }
 
 .btn--gradient-danger {
-    background: linear-gradient(90deg, var(--color-danger-600), var(--color-danger-500));
-    color: white;
+    background: linear-gradient(90deg, var(--color-danger), var(--color-red-400));
+    color: var(--color-white);
 }
 
 .btn--gradient-warning {
-    background: linear-gradient(90deg, var(--color-warning-600), var(--color-warning-500));
-    color: white;
+    background: linear-gradient(90deg, var(--color-warning), var(--color-amber-400));
+    color: var(--color-white);
 }
 
 .btn--gradient-info {
-    background: linear-gradient(90deg, var(--color-info-600), var(--color-info-500));
-    color: white;
+    background: linear-gradient(90deg, var(--color-info), var(--color-cyan-400));
+    color: var(--color-white);
 }
 
 .btn--gradient-primary:hover:not(:disabled),
@@ -303,6 +303,11 @@
 .btn:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+}
+
+/* FULL WIDTH */
+.btn--full-width {
+    width: 100%;
 }
 
 /* ANIMATIONS */

@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from "react";
-import { ButtonProps, Ripple } from "@/types/button";
-import "./button.css";
+import { useCallback, useState } from "react";
+import { ButtonProps, Ripple } from "./button";
+import "./Button.css";
 
 const Button = (props: ButtonProps) => {
   const {
@@ -17,6 +17,7 @@ const Button = (props: ButtonProps) => {
     leadingIcon: LeadingIcon,
     trailingIcon: TrailingIcon,
     iconOnly = false,
+    fullWidth = false,
   } = props;
 
   const [ripples, setRipples] = useState<Ripple[]>([]);
@@ -53,6 +54,7 @@ const Button = (props: ButtonProps) => {
     `btn--${variant}-${color}`,
     `btn--${size}`,
     `btn--${shape}`,
+    fullWidth && "btn--full-width",
     animation && `btn--${animation}`,
     iconOnly && "btn--icon-only",
     loading && "btn--loading",

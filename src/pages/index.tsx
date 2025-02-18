@@ -1,4 +1,4 @@
-import { Button, Avatar } from "@/components";
+import { Button, Avatar, Badge } from "@/components";
 import { ChevronRight, Mail } from "lucide-react";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 p-8">
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Buttons</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Button</h1>
           <p className="mt-2 text-gray-500">
             A collection of button styles and variants.
           </p>
@@ -24,16 +24,16 @@ export default function Home() {
             </p>
             <div className="bg-white rounded-lg border border-gray-200 p-4">
               <div className="flex flex-wrap gap-4">
-                <Button text={"Primary"} variant="filled" color={"primary"} />
+                <Button text={"Primary"} variant={"filled"} color={"primary"} />
                 <Button
                   text={"Secondary"}
-                  variant="filled"
+                  variant={"filled"}
                   color={"secondary"}
                 />
-                <Button text={"Danger"} variant="filled" color={"danger"} />
-                <Button text={"Warning"} variant="filled" color={"warning"} />
-                <Button text={"Success"} variant="filled" color={"success"} />
-                <Button text={"Info"} variant="filled" color={"info"} />
+                <Button text={"Danger"} variant={"filled"} color={"danger"} />
+                <Button text={"Warning"} variant={"filled"} color={"warning"} />
+                <Button text={"Success"} variant={"filled"} color={"success"} />
+                <Button text={"Info"} variant={"filled"} color={"info"} />
               </div>
             </div>
           </div>
@@ -48,16 +48,28 @@ export default function Home() {
             </p>
             <div className="bg-white rounded-lg border border-gray-200 p-4">
               <div className="flex flex-wrap gap-4">
-                <Button text={"Primary"} variant="outlined" color={"primary"} />
+                <Button
+                  text={"Primary"}
+                  variant={"outlined"}
+                  color={"primary"}
+                />
                 <Button
                   text={"Secondary"}
-                  variant="outlined"
+                  variant={"outlined"}
                   color={"secondary"}
                 />
-                <Button text={"Danger"} variant="outlined" color={"danger"} />
-                <Button text={"Warning"} variant="outlined" color={"warning"} />
-                <Button text={"Success"} variant="outlined" color={"success"} />
-                <Button text={"Info"} variant="outlined" color={"info"} />
+                <Button text={"Danger"} variant={"outlined"} color={"danger"} />
+                <Button
+                  text={"Warning"}
+                  variant={"outlined"}
+                  color={"warning"}
+                />
+                <Button
+                  text={"Success"}
+                  variant={"outlined"}
+                  color={"success"}
+                />
+                <Button text={"Info"} variant={"outlined"} color={"info"} />
               </div>
             </div>
           </div>
@@ -257,6 +269,176 @@ export default function Home() {
                 <Avatar initials="LM" />
                 <Avatar initials="AB" />
                 <Avatar initials="CD" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-gray-900">Badge</h1>
+          <p className="mt-2 text-gray-500">
+            A collection of badge styles and variants.
+          </p>
+        </div>
+
+        <div className="w-full">
+          {/* Badge Filled Colors Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">Filled Colors</h2>
+            <p className="text-sm text-gray-500 mb-4">
+              A showcase of all available filled colors.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Badge text={"Gray Badge"} variant="filled" color={"gray"} />
+                <Badge text={"Red Badge"} variant="filled" color={"red"} />
+                <Badge
+                  text={"Yellow Badge"}
+                  variant="filled"
+                  color={"yellow"}
+                />
+                <Badge text={"Green Badge"} variant="filled" color={"green"} />
+                <Badge text={"Blue Badge"} variant="filled" color={"blue"} />
+                <Badge
+                  text={"Purple Badge"}
+                  variant="filled"
+                  color={"purple"}
+                />
+                <Badge text={"Pink Badge"} variant="filled" color={"pink"} />
+              </div>
+            </div>
+          </div>
+
+          {/* Badge Outlined Colors Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">
+              Outlined Colors
+            </h2>
+            <p className="text-sm text-gray-500 mb-4">
+              A showcase of all available outlined colors.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Badge text={"Gray Badge"} variant="outlined" color={"gray"} />
+                <Badge text={"Red Badge"} variant="outlined" color={"red"} />
+                <Badge
+                  text={"Yellow Badge"}
+                  variant="outlined"
+                  color={"yellow"}
+                />
+                <Badge
+                  text={"Green Badge"}
+                  variant="outlined"
+                  color={"green"}
+                />
+                <Badge text={"Blue Badge"} variant="outlined" color={"blue"} />
+                <Badge
+                  text={"Purple Badge"}
+                  variant="outlined"
+                  color={"purple"}
+                />
+                <Badge text={"Pink Badge"} variant="outlined" color={"pink"} />
+              </div>
+            </div>
+          </div>
+
+          {/* Badge Ghost with Dot Colors Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">
+              Ghost With Dot Colors
+            </h2>
+            <p className="text-sm text-gray-500 mb-4">
+              A showcase of all available ghost with dot colors.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Badge text={"Gray Badge"} variant="ghost" color={"gray"} dot />
+                <Badge text={"Red Badge"} variant="ghost" color={"red"} dot />
+                <Badge
+                  text={"Yellow Badge"}
+                  variant="ghost"
+                  color={"yellow"}
+                  dot
+                />
+                <Badge
+                  text={"Green Badge"}
+                  variant="ghost"
+                  color={"green"}
+                  dot
+                />
+                <Badge text={"Blue Badge"} variant="ghost" color={"blue"} dot />
+                <Badge
+                  text={"Purple Badge"}
+                  variant="ghost"
+                  color={"purple"}
+                  dot
+                />
+                <Badge text={"Pink Badge"} variant="ghost" color={"pink"} dot />
+              </div>
+            </div>
+          </div>
+
+          {/* Badge Pill with Dot Colors Section */}
+          <div className="border-b border-gray-200 pb-10 mb-10">
+            <h2 className="font-semibold text-gray-900 mb-2">
+              Pill With Dot Colors
+            </h2>
+            <p className="text-sm text-gray-500 mb-4">
+              A showcase of all available pill with dot colors.
+            </p>
+            <div className="bg-white rounded-lg border border-gray-200 p-4">
+              <div className="flex flex-wrap gap-4">
+                <Badge
+                  text={"Gray Badge"}
+                  shape={"pill"}
+                  variant="outlined"
+                  color={"gray"}
+                  dot
+                />
+                <Badge
+                  text={"Red Badge"}
+                  shape={"pill"}
+                  variant="outlined"
+                  color={"red"}
+                  dot
+                />
+                <Badge
+                  text={"Yellow Badge"}
+                  shape={"pill"}
+                  variant="outlined"
+                  color={"yellow"}
+                  dot
+                />
+                <Badge
+                  text={"Green Badge"}
+                  shape={"pill"}
+                  variant="outlined"
+                  color={"green"}
+                  dot
+                />
+                <Badge
+                  text={"Blue Badge"}
+                  shape={"pill"}
+                  variant="outlined"
+                  color={"blue"}
+                  dot
+                />
+                <Badge
+                  text={"Purple Badge"}
+                  shape={"pill"}
+                  variant="outlined"
+                  color={"purple"}
+                  dot
+                />
+                <Badge
+                  text={"Pink Badge"}
+                  shape={"pill"}
+                  variant="outlined"
+                  color={"pink"}
+                  dot
+                />
               </div>
             </div>
           </div>

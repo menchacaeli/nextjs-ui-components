@@ -1,0 +1,111 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-tight);
+    white-space: nowrap;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2);
+    gap: var(--spacing-2);
+}
+
+/* Rounded variant */
+.badge--pill {
+    border-radius: var(--radius-full);
+}
+
+/* Filled variants */
+.badge--filled-gray {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray);
+}
+
+.badge--filled-red {
+    background-color: var(--color-red-200);
+    color: var(--color-red);
+}
+
+.badge--filled-yellow {
+    background-color: var(--color-amber-200);
+    color: var(--color-yellow);
+}
+
+.badge--filled-green {
+    background-color: var(--color-green-200);
+    color: var(--color-green);
+}
+
+.badge--filled-blue {
+    background-color: var(--color-blue-200);
+    color: var(--color-blue);
+}
+
+.badge--filled-purple {
+    background-color: var(--color-purple-200);
+    color: var(--color-purple);
+}
+
+.badge--filled-pink {
+    background-color: var(--color-pink-200);
+    color: var(--color-pink);
+}
+
+/* Outlined variants */
+.badge--outlined-gray {
+    border: 1px solid var(--color-gray);
+    color: var(--color-gray);
+}
+
+.badge--outlined-red {
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+}
+
+.badge--outlined-yellow {
+    border: 1px solid var(--color-yellow);
+    color: var(--color-yellow);
+}
+
+.badge--outlined-green {
+    border: 1px solid var(--color-green);
+    color: var(--color-green);
+}
+
+.badge--outlined-blue {
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+}
+
+.badge--outlined-purple {
+    border: 1px solid var(--color-purple);
+    color: var(--color-purple);
+}
+
+.badge--outlined-pink {
+    border: 1px solid var(--color-pink);
+    color: var(--color-pink);
+}
+
+/* Ghost variants */
+.badge--ghost {
+    border: 1px solid var(--color-gray-300);
+    background-color: transparent;
+    color: var(--color-gray);
+}
+
+/* Status dot */
+.badge--dot {
+    width: var(--spacing-2);
+    height: var(--spacing-2);
+    border-radius: var(--radius-base);
+}
+
+/* Dot colors */
+.badge--dot-gray { background-color: var(--color-gray) }
+.badge--dot-red { background-color: var(--color-red) }
+.badge--dot-yellow { background-color: var(--color-yellow) }
+.badge--dot-green { background-color: var(--color-green) }
+.badge--dot-blue { background-color: var(--color-blue) }
+.badge--dot-purple { background-color: var(--color-purple) }
+.badge--dot-pink { background-color: var(--color-pink) }

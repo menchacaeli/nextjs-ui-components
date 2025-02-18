@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { AvatarProps } from "@/types/avatar";
-import "./avatar.css";
+import { AvatarProps } from "./avatar";
+import "./Avatar.css";
 
 const Avatar = (props: AvatarProps) => {
   const {
