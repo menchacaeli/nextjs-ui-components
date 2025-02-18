@@ -6,7 +6,7 @@
     line-height: var(--line-height-tight);
     white-space: nowrap;
     border-radius: var(--radius-md);
-    padding: var(--spacing-2);
+    padding: var(--spacing-1) var(--spacing-2);
     gap: var(--spacing-2);
 }
 
