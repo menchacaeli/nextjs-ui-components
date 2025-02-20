@@ -57,7 +57,7 @@
 }
 
 /* AVATAR STATUS */
-.avatar-status {
+.avatar--status {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -66,44 +66,44 @@
 }
 
 /* AVATAR STATUS VARIANTS */
-.avatar-status--online {
+.avatar--status-online {
     background-color: var(--color-success);
 }
 
-.avatar-status--offline {
+.avatar--status-offline {
     background-color: var(--color-gray);
 }
 
-.avatar-status--busy {
+.avatar--status-busy {
     background-color: var(--color-danger);
 }
 
-.avatar-status--away {
+.avatar--status-away {
     background-color: var(--color-warning);
 }
 
 /* AVATAR STATUS SIZE VARIANTS */
-.avatar-status--xs {
+.avatar--status-xs {
     width: 8px;
     height: 8px;
 }
 
-.avatar-status--sm {
+.avatar--status-sm {
     width: 10px;
     height: 10px;
 }
 
-.avatar-status--md {
+.avatar--status-md {
     width: 12px;
     height: 12px;
 }
 
-.avatar-status--lg {
+.avatar--status-lg {
     width: 14px;
     height: 14px;
 }
 
-.avatar-status--xl {
+.avatar--status-xl {
     width: 16px;
     height: 16px;
 }

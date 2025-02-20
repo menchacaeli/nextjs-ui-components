@@ -1,4 +1,4 @@
-import { Button, Avatar, Badge } from "@/components";
+import { Button, Avatar, Badge, Option } from "@/components";
 import { ChevronRight, Mail } from "lucide-react";
 
 export default function Home() {
@@ -6,23 +6,33 @@ export default function Home() {
   const avatarImage =
     "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3161&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div
+      className="min-h-screen bg-gray-50 p-8"
+      style={{ backgroundColor: "var(--color-bg-primary)" }}
+    >
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Button</h1>
-          <p className="mt-2 text-gray-500">
-            A collection of button styles and variants.
-          </p>
+          <h1 className="text-3xl font-bold">Button</h1>
+          <p className="mt-2">A collection of button styles and variants.</p>
         </div>
 
         <div className="w-full">
           {/* Button Colors Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Colors</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Colors</h2>
+            <p className="text-sm mb-4">
               A showcase of all available button colors.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Button text={"Primary"} variant={"filled"} color={"primary"} />
                 <Button
@@ -39,14 +49,21 @@ export default function Home() {
           </div>
 
           {/* Button Outlined Colors Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">
-              Outlined Colors
-            </h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Outlined Colors</h2>
+            <p className="text-sm mb-4">
               A showcase of all available outlined button colors.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Button
                   text={"Primary"}
@@ -75,12 +92,21 @@ export default function Home() {
           </div>
 
           {/* Button Variants */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Variants</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Variants</h2>
+            <p className="text-sm mb-4">
               Explore different visual styles for buttons.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Button text={"Filled"} variant="filled" />
                 <Button text={"Gradient"} variant="gradient" />
@@ -91,12 +117,21 @@ export default function Home() {
           </div>
 
           {/* Shapes Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Shapes</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Shapes</h2>
+            <p className="text-sm mb-4">
               Explore different button corner styles.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap items-center gap-4">
                 <Button text={"Default"} shape="default" />
                 <Button text={"Rounded"} shape="rounded" />
@@ -107,12 +142,21 @@ export default function Home() {
           </div>
 
           {/* Loading Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Loading</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Loading</h2>
+            <p className="text-sm mb-4">
               Buttons with loading indicators for actions.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Button text={"Button text"} loading />
                 <Button text={"Button text"} shape={"rounded"} loading />
@@ -123,12 +167,21 @@ export default function Home() {
           </div>
 
           {/* Icons Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">With Icon</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">With Icon</h2>
+            <p className="text-sm mb-4">
               Buttons with icons for enhanced visual cues.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Button text={"Button text"} leadingIcon={Mail} />
                 <Button
@@ -154,12 +207,21 @@ export default function Home() {
           </div>
 
           {/* Sizes Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Sizes</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Sizes</h2>
+            <p className="text-sm mb-4">
               Different button sizes for various contexts.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap items-center gap-4">
                 <Button text={"Extra Small"} size="xs" />
                 <Button text={"Small"} size="sm" />
@@ -170,12 +232,21 @@ export default function Home() {
           </div>
 
           {/* Animation Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Animations</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Animations</h2>
+            <p className="text-sm mb-4">
               Button animations for interactive feedback.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap items-center gap-4">
                 <Button text={"Ripple"} animation="ripple" />
                 <Button text={"Scale"} animation="scale" />
@@ -184,12 +255,21 @@ export default function Home() {
           </div>
 
           {/* Icon-only Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Icon-only</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Icon-only</h2>
+            <p className="text-sm mb-4">
               Buttons with only icons for compact actions.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap items-center gap-4">
                 <Button iconOnly leadingIcon={Mail} />
                 <Button
@@ -218,20 +298,27 @@ export default function Home() {
 
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Avatar</h1>
-          <p className="mt-2 text-gray-500">
-            A collection of avatar styles and variants.
-          </p>
+          <h1 className="text-3xl font-bold">Avatar</h1>
+          <p className="mt-2">A collection of avatar styles and variants.</p>
         </div>
 
         <div className="w-full">
           {/* Avatar Sizes Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Sizes</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Sizes</h2>
+            <p className="text-sm mb-4">
               Different avatar sizes for various contexts.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Avatar src={avatarImage} size="xs" />
                 <Avatar src={avatarImage} size="sm" />
@@ -242,12 +329,21 @@ export default function Home() {
           </div>
 
           {/* Avatar Status Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Status</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Status</h2>
+            <p className="text-sm mb-4">
               Avatars with status indicators for user presence.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Avatar src={avatarImage} status="online" />
                 <Avatar src={avatarImage} status="offline" />
@@ -258,12 +354,21 @@ export default function Home() {
           </div>
 
           {/* Avatar Initials Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Initials</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Initials</h2>
+            <p className="text-sm mb-4">
               Avatars with initials for user profiles.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Avatar initials="JD" />
                 <Avatar initials="LM" />
@@ -277,20 +382,27 @@ export default function Home() {
 
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Badge</h1>
-          <p className="mt-2 text-gray-500">
-            A collection of badge styles and variants.
-          </p>
+          <h1 className="text-3xl font-bold">Badge</h1>
+          <p className="mt-2">A collection of badge styles and variants.</p>
         </div>
 
         <div className="w-full">
           {/* Badge Filled Colors Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">Filled Colors</h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Filled Colors</h2>
+            <p className="text-sm mb-4">
               A showcase of all available filled colors.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Badge text={"Gray Badge"} variant="filled" color={"gray"} />
                 <Badge text={"Red Badge"} variant="filled" color={"red"} />
@@ -312,14 +424,21 @@ export default function Home() {
           </div>
 
           {/* Badge Outlined Colors Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">
-              Outlined Colors
-            </h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Outlined Colors</h2>
+            <p className="text-sm mb-4">
               A showcase of all available outlined colors.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Badge text={"Gray Badge"} variant="outlined" color={"gray"} />
                 <Badge text={"Red Badge"} variant="outlined" color={"red"} />
@@ -345,14 +464,21 @@ export default function Home() {
           </div>
 
           {/* Badge Ghost with Dot Colors Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">
-              Ghost With Dot Colors
-            </h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Ghost With Dot Colors</h2>
+            <p className="text-sm mb-4">
               A showcase of all available ghost with dot colors.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Badge text={"Gray Badge"} variant="ghost" color={"gray"} dot />
                 <Badge text={"Red Badge"} variant="ghost" color={"red"} dot />
@@ -381,14 +507,21 @@ export default function Home() {
           </div>
 
           {/* Badge Pill with Dot Colors Section */}
-          <div className="border-b border-gray-200 pb-10 mb-10">
-            <h2 className="font-semibold text-gray-900 mb-2">
-              Pill With Dot Colors
-            </h2>
-            <p className="text-sm text-gray-500 mb-4">
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <h2 className="font-semibold mb-2">Pill With Dot Colors</h2>
+            <p className="text-sm mb-4">
               A showcase of all available pill with dot colors.
             </p>
-            <div className="bg-white rounded-lg border border-gray-200 p-4">
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
               <div className="flex flex-wrap gap-4">
                 <Badge
                   text={"Gray Badge"}
@@ -440,6 +573,45 @@ export default function Home() {
                   dot
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold">Option</h1>
+          <p className="mt-2">A dropdown select option.</p>
+        </div>
+
+        <div className="w-full">
+          {/* Options text only */}
+          <div
+            className="rounded-lg border p-4"
+            style={{
+              backgroundColor: "var(--color-bg-primary)",
+              borderColor: "var(--color-gray-500)",
+            }}
+          >
+            <div className="flex flex-wrap gap-4">
+              <Option
+                items={[
+                  {
+                    text: "Option One",
+                    value: "Option One",
+                    onClick: (value) => {
+                      alert(value);
+                    },
+                  },
+                  {
+                    text: "Option Two",
+                    value: "Option Two",
+                    onClick: (value) => {
+                      alert(value);
+                    },
+                  },
+                ]}
+              />
             </div>
           </div>
         </div>

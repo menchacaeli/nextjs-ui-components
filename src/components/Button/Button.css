@@ -176,7 +176,7 @@
 .btn--ghost-warning:hover:not(:disabled),
 .btn--ghost-danger:hover:not(:disabled),
 .btn--ghost-success:hover:not(:disabled) {
-    background-color: var(--color-neutral-200);
+    background-color: var(--color-bg-secondary);
 }
 
 /* BUTTON GRADIENT VARIANT WITH COLOR */
@@ -220,7 +220,7 @@
 }
 
 /* ICON */
-.btn-icon {
+.btn--icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -232,26 +232,26 @@
 }
 
 /* ICON SIZE VARIANTS */
-.btn-icon--sm {
+.btn--icon-sm {
     width: 16px;
     height: 16px;
 }
 
-.btn-icon--md {
+.btn--icon-md {
     width: 20px;
     height: 20px;
 }
 
-.btn-icon--lg {
+.btn--icon-lg {
     width: 24px;
     height: 24px;
 }
 
-.leading-icon {
+.btn--leading-icon {
     margin-right: var(--spacing-2);
 }
 
-.trailing-icon {
+.btn--trailing-icon {
     margin-left: var(--spacing-2);
 }
 

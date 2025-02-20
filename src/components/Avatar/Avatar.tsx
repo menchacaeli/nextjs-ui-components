@@ -23,9 +23,9 @@ const Avatar = (props: AvatarProps) => {
     .join(" ");
 
   const statusClasses = [
-    "avatar-status",
-    `avatar-status--${status}`,
-    `avatar-status--${size}`,
+    "avatar--status",
+    `avatar--status-${status}`,
+    `avatar--status-${size}`,
   ]
     .filter(Boolean)
     .join(" ");

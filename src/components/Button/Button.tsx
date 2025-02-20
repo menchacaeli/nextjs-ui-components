@@ -63,7 +63,7 @@ const Button = (props: ButtonProps) => {
     .filter(Boolean)
     .join(" ");
 
-  const iconClasses = ["btn-icon", `btn-icon--${size}`]
+  const iconClasses = ["btn--icon", `btn--icon-${size}`]
     .filter(Boolean)
     .join(" ");
 
@@ -85,14 +85,14 @@ const Button = (props: ButtonProps) => {
       <>
         {LeadingIcon && (
           <LeadingIcon
-            className={`${iconClasses} leading-icon`}
+            className={`${iconClasses} btn--leading-icon`}
             aria-hidden="true"
           />
         )}
         {text}
         {TrailingIcon && (
           <TrailingIcon
-            className={`${iconClasses} trailing-icon`}
+            className={`${iconClasses} btn--trailing-icon`}
             aria-hidden="true"
           />
         )}

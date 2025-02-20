@@ -89,9 +89,9 @@
 
 /* Ghost variants */
 .badge--ghost {
-    border: 1px solid var(--color-gray-300);
+    border: 1px solid var(--color-text-primary);
     background-color: transparent;
-    color: var(--color-gray);
+    color: var(--color-text-primary);
 }
 
 /* Status dot */
