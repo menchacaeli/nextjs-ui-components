@@ -1,4 +1,4 @@
-import { Button, Avatar, Badge, Option } from "@/components";
+import { Button, Avatar, Badge, Option, StackedList } from "@/components";
 import { ChevronRight, Mail } from "lucide-react";
 
 export default function Home() {
@@ -587,14 +587,12 @@ export default function Home() {
         <div className="w-full">
           {/* Options text only */}
           <div
-            className="rounded-lg border p-4"
-            style={{
-              backgroundColor: "var(--color-bg-primary)",
-              borderColor: "var(--color-gray-500)",
-            }}
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
           >
             <div className="flex flex-wrap gap-4">
               <Option
+                text={"Select an option text only"}
                 items={[
                   {
                     text: "Option One",
@@ -609,6 +607,120 @@ export default function Home() {
                     onClick: (value) => {
                       alert(value);
                     },
+                  },
+                ]}
+              />
+
+              <Option
+                text={"Select an option text with icon"}
+                items={[
+                  {
+                    text: "Option One",
+                    value: "Option One",
+                    leadingIcon: Mail,
+                    onClick: (value) => {
+                      alert(value);
+                    },
+                  },
+                  {
+                    text: "Option Two",
+                    value: "Option Two",
+                    leadingIcon: Mail,
+                    onClick: (value) => {
+                      alert(value);
+                    },
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold">Stacked List</h1>
+          <p className="mt-2">A preview of the stacked list componet.</p>
+        </div>
+
+        <div className="w-full">
+          {/* Options text only */}
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <div className="flex flex-wrap gap-4">
+              <StackedList
+                items={[
+                  { text: "Item One" },
+                  { text: "Item Two" },
+                  { text: "Item Three" },
+                  { text: "Item Four" },
+                ]}
+              />
+
+              <StackedList
+                items={[
+                  { text: "Item One", secondaryText: "Secondary text" },
+                  { text: "Item Two", secondaryText: "Secondary text" },
+                  { text: "Item Three", secondaryText: "Secondary text" },
+                  { text: "Item Four", secondaryText: "Secondary text" },
+                ]}
+              />
+
+              <StackedList
+                items={[
+                  {
+                    avatar: <Avatar src={avatarImage} />,
+                    text: "Item One",
+                    secondaryText: "Secondary text",
+                    secondaryAction: (
+                      <Button
+                        iconOnly
+                        size={"sm"}
+                        leadingIcon={Mail}
+                        shape={"rounded"}
+                      />
+                    ),
+                  },
+                  {
+                    avatar: <Avatar src={avatarImage} />,
+                    text: "Item Two",
+                    secondaryText: "Secondary text",
+                    secondaryAction: (
+                      <Button
+                        iconOnly
+                        size={"sm"}
+                        leadingIcon={Mail}
+                        shape={"rounded"}
+                      />
+                    ),
+                  },
+                  {
+                    avatar: <Avatar src={avatarImage} />,
+                    text: "Item Three",
+                    secondaryText: "Secondary text",
+                    secondaryAction: (
+                      <Button
+                        iconOnly
+                        size={"sm"}
+                        leadingIcon={Mail}
+                        shape={"rounded"}
+                      />
+                    ),
+                  },
+                  {
+                    avatar: <Avatar src={avatarImage} />,
+                    text: "Item Four",
+                    secondaryText: "Secondary text",
+                    secondaryAction: (
+                      <Button
+                        iconOnly
+                        size={"sm"}
+                        leadingIcon={Mail}
+                        shape={"rounded"}
+                      />
+                    ),
                   },
                 ]}
               />

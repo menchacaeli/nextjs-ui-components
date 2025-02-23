@@ -5,7 +5,7 @@ import "./Option.css";
 import { useEffect, useState, useRef, useCallback } from "react";
 
 const Option = (props: ListProps) => {
-  const { items } = props;
+  const { text = "options", items } = props;
 
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownPosition, setDropdownPosition] = useState<"bottom" | "top">(
@@ -68,7 +68,7 @@ const Option = (props: ListProps) => {
   return (
     <div className={"option--container"} ref={containerRef}>
       <Button
-        text={"options"}
+        text={text}
         trailingIcon={ChevronDown}
         className={"option--button"}
         onClick={toggleOption}
@@ -79,13 +79,17 @@ const Option = (props: ListProps) => {
           ref={dropdownRef}
         >
           {items.map((item, index) => {
+            const LeadingIcon = item.leadingIcon;
             return (
               <div
                 key={index}
                 className={"option--item"}
                 onClick={() => item.onClick(item.value)}
               >
-                <span className={"option--item-text"}>{item.text}</span>
+                {LeadingIcon && (
+                  <LeadingIcon className={"option--icon"} aria-hidden="true" />
+                )}
+                <span className={"option--text"}>{item.text}</span>
               </div>
             );
           })}
