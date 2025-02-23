@@ -1,10 +1,60 @@
-import { Button, Avatar, Badge, Option, StackedList } from "@/components";
+import {
+  Button,
+  Avatar,
+  Badge,
+  Option,
+  StackedList,
+  Table,
+} from "@/components";
 import { ChevronRight, Mail } from "lucide-react";
+import { Column } from "@/components/Table/table.ts";
 
 export default function Home() {
   // for demo purposes
   const avatarImage =
     "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3161&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
+  interface User {
+    id: number;
+    created: string;
+    name: string;
+    email: string;
+    role: string;
+    status: "active" | "inactive";
+  }
+
+  const columns: Array<Column<User>> = [
+    { key: "id", header: "ID", sortable: true },
+    { key: "created", header: "Created", sortable: true },
+    { key: "name", header: "Name", sortable: true },
+    { key: "email", header: "Email" },
+    {
+      key: "status",
+      header: "Status",
+      render: (value) => <span className={`status-${value}`}>{value}</span>,
+    },
+    { key: "role", header: "Role", width: "150px" },
+  ];
+
+  const users: Array<User> = [
+    {
+      id: 1,
+      created: "2021-01-01",
+      name: "John Doe",
+      email: "john@example.com",
+      role: "Admin",
+      status: "active",
+    },
+    {
+      id: 2,
+      created: "2021-01-01",
+      name: "Dang Doe",
+      email: "dang@example.com",
+      role: "Admin",
+      status: "active",
+    },
+  ];
+
   return (
     <div
       className="min-h-screen bg-gray-50 p-8"
@@ -724,6 +774,32 @@ export default function Home() {
                   },
                 ]}
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold">Table</h1>
+          <p className="mt-2">A preview of the table componet.</p>
+        </div>
+
+        <div className="w-full">
+          {/* Table */}
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-bg-secondary)" }}
+          >
+            <div className="flex flex-wrap gap-4">
+              <Table columns={columns} data={users} />
+              <Table
+                columns={columns}
+                data={users}
+                selectable
+                onRowSelect={(rows) => console.log("selected rows:", rows)}
+              />
+              <Table columns={columns} data={users} rowsPerPage={1} />
             </div>
           </div>
         </div>
