@@ -1,0 +1,17 @@
+.layout {
+    display: grid;
+    grid-template-columns: calc(var(--spacing-16) * 4) 1fr;
+    grid-template-areas: "sidebar main";
+    height: 100vh;
+}
+
+.layout-sidebar {
+    grid-area: sidebar;
+    background-color: var(--color-bg-primary);
+}
+
+.layout-main {
+    grid-area: main;
+    background-color: var(--color-bg-primary);
+    overflow-y: auto;
+}

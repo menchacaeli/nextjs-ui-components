@@ -1,14 +1,14 @@
 import { LucideIcon } from "lucide-react";
 
-interface ListItem {
+interface OptionItem {
   text: string;
   value: string;
   leadingIcon?: LucideIcon;
   onClick: (value: string) => void;
 }
 
-export interface ListProps extends React.HTMLAttributes<HTMLUListElement> {
+export interface OptionProps extends React.HTMLAttributes<HTMLUListElement> {
   text: string;
-  items: ListItem[];
+  items: Array<OptionItem>;
   id?: string;
 }

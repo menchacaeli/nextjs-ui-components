@@ -1,10 +1,7 @@
 .list-container {
     width: 100%;
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-base);
     background-color: var(--color-bg-primary);
-    border: 1px solid var(--color-bg-secondary);
-    padding: var(--spacing-2) 0;
 }
 
 .stacked-list {
@@ -15,6 +12,11 @@
 
 .list-item {
     position: relative;
+}
+
+.list-item.selectable:hover {
+    cursor: pointer;
+    background-color: var(--color-bg-secondary);
 }
 
 .item-content {
@@ -46,10 +48,7 @@
 }
 
 .item-divider {
-    position: absolute;
-    bottom: 0;
-    left: var(--spacing-4);
-    right: var(--spacing-4);
+    width: 100%;
     height: 1px;
     background-color: var(--color-bg-secondary);
 }

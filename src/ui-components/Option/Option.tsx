@@ -1,10 +1,10 @@
-import { ListProps } from "./option.ts";
+import { OptionProps } from "./option.ts";
 import Button from "../Button/Button.tsx";
 import { ChevronDown } from "lucide-react";
 import "./Option.css";
 import { useEffect, useState, useRef, useCallback } from "react";
 
-const Option = (props: ListProps) => {
+const Option = (props: OptionProps) => {
   const { text = "options", items } = props;
 
   const [isOpen, setIsOpen] = useState(false);

@@ -8,7 +8,11 @@ const StackedList = (props: StackedListProps) => {
       <ul className="stacked-list">
         {items.map((item, index) => {
           return (
-            <li key={index} className="list-item">
+            <li
+              key={`${item.value}-${index}`}
+              className={"list-item" + (item.selectable ? " selectable" : "")}
+              onClick={() => item.selectable && props.onItemClick?.(item)}
+            >
               <div className="item-content">
                 {item.avatar && (
                   <div className="item-avatar">{item.avatar}</div>

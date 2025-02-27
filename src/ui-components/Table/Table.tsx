@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Table.css";
 import { TableProps } from "./table.ts";
-import { Button } from "@/components";
+import { Button } from "@/ui-components";
 
 function Table<T extends { id: string | number }>({
   data,
@@ -106,7 +106,9 @@ function Table<T extends { id: string | number }>({
                 key={String(column.key)}
                 style={{ width: column.width }}
                 className={column.sortable ? "sortable" : ""}
-                onClick={() => column.sortable && handleSort(column.key)}
+                onClick={() =>
+                  column.sortable && handleSort(column.key as keyof T)
+                }
               >
                 {column.header}
                 {column.sortable && sortColumn === column.key && (
@@ -139,8 +141,8 @@ function Table<T extends { id: string | number }>({
               {columns.map((column) => (
                 <td key={String(column.key)}>
                   {column.render
-                    ? column.render(row[column.key], row)
-                    : String(row[column.key])}
+                    ? column.render(row[column.key as keyof T], row)
+                    : String(row[column.key as keyof T])}
                 </td>
               ))}
             </tr>
