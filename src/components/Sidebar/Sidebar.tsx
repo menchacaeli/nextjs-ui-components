@@ -33,6 +33,11 @@ const Sidebar = (props: SidebarProps) => {
       value: "table",
       selectable: true,
     },
+    {
+      text: "Form",
+      value: "form",
+      selectable: true,
+    },
   ];
 
   return (

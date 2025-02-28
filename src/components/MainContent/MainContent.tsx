@@ -2,12 +2,13 @@ import {
   Avatar,
   Badge,
   Button,
+  Input,
   Option,
   StackedList,
   Table,
 } from "@/ui-components";
 import { MainContentProps } from "./main-content.ts";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronRight, EditIcon, Mail } from "lucide-react";
 import { Column } from "@/ui-components/Table/table.ts";
 
@@ -21,6 +22,7 @@ interface User {
 }
 
 const MainContent = (props: MainContentProps) => {
+  const [inputValue, setInputValue] = useState("");
   const mainRef = useRef<HTMLDivElement>(null);
 
   // for demo purposes
@@ -731,7 +733,7 @@ const MainContent = (props: MainContentProps) => {
       <section id="stacked-list" className="max-w-5xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">Stacked List</h1>
-          <p className="mt-2">A preview of the stacked list componet.</p>
+          <p className="mt-2">A preview of the stacked list component.</p>
         </div>
 
         <div className="w-full">
@@ -869,7 +871,7 @@ const MainContent = (props: MainContentProps) => {
       <section id="table" className="max-w-5xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">Table</h1>
-          <p className="mt-2">A preview of the table componet.</p>
+          <p className="mt-2">A preview of the table component.</p>
         </div>
 
         <div className="w-full">
@@ -934,6 +936,56 @@ const MainContent = (props: MainContentProps) => {
             >
               <div className="flex flex-wrap gap-4">
                 <Table columns={columns} data={users} rowsPerPage={1} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="form" className="max-w-5xl mx-auto">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold">Form</h1>
+          <p className="mt-2">A preview of the form components.</p>
+        </div>
+
+        <div className="w-full">
+          {/* Input Section */}
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-gray-500)" }}
+          >
+            <h2 className="font-semibold mb-2">Input</h2>
+            <p className="text-sm mb-4">A preview of a input field.</p>
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
+              <div className="flex flex-wrap gap-4">
+                <Input
+                  label={"My Input"}
+                  name={"my-input"}
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                />
+
+                <Input
+                  label={"My Input With Success"}
+                  name={"my-input-success"}
+                  value={"Success"}
+                  success={"Success message"}
+                  onChange={(e) => console.log(e.target.value)}
+                />
+
+                <Input
+                  label={"My Input With Error"}
+                  name={"my-input-success"}
+                  value={"Error"}
+                  error={"Error message"}
+                  onChange={(e) => console.log(e.target.value)}
+                />
               </div>
             </div>
           </div>

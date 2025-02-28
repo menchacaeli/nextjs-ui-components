@@ -5,6 +5,7 @@ export { default as Badge } from "./Badge/Badge.tsx";
 export { default as Option } from "./Option/Option.tsx";
 export { default as StackedList } from "./StackedList/StackedList.tsx";
 export { default as Table } from "./Table/Table.tsx";
+export { default as Input } from "./Form/Input/Input.tsx";
 
 // Exporting types
 export type { AvatarProps } from "./Avatar/avatar.ts";
@@ -16,3 +17,4 @@ export type {
   StackedListItem,
 } from "./StackedList/stacked-list.ts";
 export type { TableProps } from "./Table/table.ts";
+export type { InputProps } from "./Form/Input/input.ts";
