@@ -72,16 +72,16 @@
     --color-cyan-900: #283442;
 
     /* Neutral Colors */
-    --color-neutral-50: #f8fafc;
-    --color-neutral-100: #f1f5f9;
-    --color-neutral-200: #e2e8f0;
-    --color-neutral-300: #cbd5e1;
-    --color-neutral-400: #94a3b8;
-    --color-neutral-500: #64748b;
-    --color-neutral-600: #475569;
-    --color-neutral-700: #334155;
-    --color-neutral-800: #1e293b;
-    --color-neutral-900: #0f172a;
+    --color-neutral-50: #f2f4f8;
+    --color-neutral-100: #d6dae5;
+    --color-neutral-200: #b2b8cb;
+    --color-neutral-300: #8f98b0;
+    --color-neutral-400: #727d98;
+    --color-neutral-500: #5b6680;
+    --color-neutral-600: #424b60;
+    --color-neutral-700: #353d50;
+    --color-neutral-800: #272d3d;
+    --color-neutral-900: #1f2431;
 
     /* Pink Colors */
     --color-pink-50: #fdf2f8;
@@ -100,16 +100,16 @@
     --color-white: #fff;
 
     /* Grayscale */
-    --color-gray-50: #f9fafb;
-    --color-gray-100: #f4f5f7;
-    --color-gray-200: #e5e7eb;
-    --color-gray-300: #d2d6dc;
-    --color-gray-400: #9fa6b2;
-    --color-gray-500: #6b7280;
-    --color-gray-600: #4b5563;
-    --color-gray-700: #374151;
-    --color-gray-800: #1f2937;
-    --color-gray-900: #111827;
+    --color-gray-50: #eeeefc;
+    --color-gray-100: #e1e1ef;
+    --color-gray-200: #c7c9d5;
+    --color-gray-300: #a9abb6;
+    --color-gray-400: #8a8c98;
+    --color-gray-500: #70727c;
+    --color-gray-600: #60626b;
+    --color-gray-700: #4e5057;
+    --color-gray-800: #3b3d42;
+    --color-gray-900: #2f3034;
 
     /* Semantic Colors */
     --color-success: var(--color-green-500);
@@ -211,10 +211,10 @@
 @media (prefers-color-scheme: dark) {
     :root {
         /* Dark mode background and text colors */
-        --color-bg-primary: var(--color-neutral-900);
-        --color-bg-secondary: var(--color-neutral-800);
-        --color-text-primary: var(--color-neutral-50);
-        --color-text-secondary: var(--color-neutral-300);
+        --color-bg-primary: var(--color-gray-900);
+        --color-bg-secondary: var(--color-gray-800);
+        --color-text-primary: var(--color-gray-50);
+        --color-text-secondary: var(--color-gray-300);
     }
 }
 
@@ -222,9 +222,9 @@
 @media (prefers-color-scheme: light) {
     :root {
         /* Light mode background and text colors */
-        --color-bg-primary: var(--color-neutral-50);
-        --color-bg-secondary: var(--color-neutral-100);
-        --color-text-primary: var(--color-neutral-900);
-        --color-text-secondary: var(--color-neutral-600);
+        --color-bg-primary: var(--color-gray-50);
+        --color-bg-secondary: var(--color-gray-100);
+        --color-text-primary: var(--color-gray-900);
+        --color-text-secondary: var(--color-gray-600);
     }
 }
