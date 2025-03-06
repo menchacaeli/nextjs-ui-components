@@ -4,6 +4,7 @@ import {
   Button,
   Input,
   Option,
+  PriceInput,
   StackedList,
   Table,
 } from "@/ui-components";
@@ -985,6 +986,34 @@ const MainContent = (props: MainContentProps) => {
                   value={"Error"}
                   error={"Error message"}
                   onChange={(e) => console.log(e.target.value)}
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Price Input Section */}
+          <div
+            className="border-b pb-10 mb-10"
+            style={{ borderColor: "var(--color-gray-500)" }}
+          >
+            <h2 className="font-semibold mb-2">Price Input</h2>
+            <p className="text-sm mb-4">A preview of a price input field.</p>
+            <div
+              className="rounded-lg border p-4"
+              style={{
+                backgroundColor: "var(--color-bg-primary)",
+                borderColor: "var(--color-gray-500)",
+              }}
+            >
+              <div className="flex flex-wrap gap-4">
+                <PriceInput
+                  label={"My Price Input"}
+                  name={"my-price-input"}
+                  value={{
+                    amount: "100",
+                    currency: "USD",
+                  }}
+                  onChange={(value) => console.log(value)}
                 />
               </div>
             </div>
