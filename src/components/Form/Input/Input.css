@@ -1,0 +1,99 @@
+.input--container {
+    @apply flex flex-col w-full;
+    margin-bottom: var(--spacing-1);
+}
+
+.input--label {
+    @apply font-medium select-none;
+    font-size:     var(--font-size-sm);
+    color:         var(--color-text-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.input--label.required::after {
+    content:      "*";
+    color:        var(--color-danger);
+    margin-left:  var(--spacing-1);
+}
+
+.input--wrapper {
+    @apply relative flex items-center;
+}
+
+.input--field {
+    @apply block w-full;
+
+    --input-border:       var(--color-gray-300);
+    --input-focus-ring:   color-mix(in srgb, var(--color-primary) 25%, transparent);
+
+    padding:           var(--font-size-2xs) var(--font-size-xs);
+    font-size:         var(--font-size-sm);
+    line-height:       var(--line-height-tight);
+    color:             var(--color-text-primary);
+    background-color:  var(--color-field-bg);
+    background-clip:   padding-box;
+    border:            1px solid var(--input-border);
+    border-radius:     var(--radius-md);
+    transition:        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input--field.with-icon {
+    padding-right: var(--spacing-8);
+}
+
+.input--field:focus {
+    border-color: var(--color-primary);
+    outline:      0;
+    box-shadow:   0 0 0 3px var(--input-focus-ring);
+}
+
+.input--field:disabled {
+    background-color: var(--color-field-bg-disabled);
+    opacity:          0.65;
+    cursor:           not-allowed;
+}
+
+.input--field.error {
+    --input-border: var(--color-danger);
+    color:          var(--color-danger);
+}
+
+.input--field.error:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-danger) 25%, transparent);
+}
+
+.input--field.success {
+    --input-border: var(--color-success);
+    color:          var(--color-success);
+}
+
+.input--field.success:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-success) 25%, transparent);
+}
+
+.input--icon {
+    @apply absolute flex items-center justify-center pointer-events-none;
+    right: var(--spacing-3);
+}
+
+.input--icon.error   { color: var(--color-danger); }
+.input--icon.success { color: var(--color-success); }
+
+.input--message {
+    margin-top: var(--spacing-2);
+    font-size:  var(--font-size-sm);
+}
+
+.input--message.error   { color: var(--color-danger); }
+.input--message.success { color: var(--color-success); }
+
+.message--with-icon {
+    @apply flex items-center;
+    gap: var(--spacing-2);
+}
+
+@media (min-width: 640px) {
+    .input--field {
+        font-size: var(--font-size-base);
+    }
+}

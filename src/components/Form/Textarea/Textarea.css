@@ -1,0 +1,88 @@
+.textarea--container {
+    @apply flex flex-col w-full;
+    margin-bottom: var(--spacing-1);
+}
+
+.textarea--label {
+    @apply font-medium select-none;
+    font-size:     var(--font-size-sm);
+    color:         var(--color-text-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.textarea--label.required::after {
+    content:     "*";
+    color:       var(--color-danger);
+    margin-left: var(--spacing-1);
+}
+
+.textarea--field {
+    @apply block w-full;
+
+    --textarea-border:     var(--color-gray-300);
+    --textarea-focus-ring: color-mix(in srgb, var(--color-primary) 25%, transparent);
+
+    padding:          var(--font-size-2xs) var(--font-size-xs);
+    font-size:        var(--font-size-sm);
+    line-height:      var(--line-height-normal);
+    color:            var(--color-text-primary);
+    background-color: var(--color-field-bg);
+    background-clip:  padding-box;
+    border:           1px solid var(--textarea-border);
+    border-radius:    var(--radius-md);
+    resize:           vertical;
+    min-height:       6rem;
+    transition:       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-family:      inherit;
+}
+
+.textarea--field:focus {
+    border-color: var(--color-primary);
+    outline:      0;
+    box-shadow:   0 0 0 3px var(--textarea-focus-ring);
+}
+
+.textarea--field:disabled {
+    background-color: var(--color-field-bg-disabled);
+    opacity:          0.65;
+    cursor:           not-allowed;
+    resize:           none;
+}
+
+.textarea--field.error {
+    --textarea-border: var(--color-danger);
+    color:             var(--color-danger);
+}
+
+.textarea--field.error:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-danger) 25%, transparent);
+}
+
+.textarea--field.success {
+    --textarea-border: var(--color-success);
+    color:             var(--color-success);
+}
+
+.textarea--field.success:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-success) 25%, transparent);
+}
+
+.textarea--footer {
+    @apply flex justify-between items-center;
+    margin-top: var(--spacing-2);
+}
+
+.textarea--message {
+    font-size: var(--font-size-sm);
+}
+
+.textarea--message.error   { color: var(--color-danger); }
+.textarea--message.success { color: var(--color-success); }
+
+.textarea--count {
+    font-size:  var(--font-size-xs);
+    color:      var(--color-text-secondary);
+    margin-left: auto;
+}
+
+.textarea--count.at-limit { color: var(--color-danger); }

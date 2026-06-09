@@ -1,0 +1,95 @@
+.checkbox--wrapper {
+    @apply inline-flex items-center gap-2 cursor-pointer select-none;
+}
+
+.checkbox--wrapper.disabled {
+    @apply cursor-not-allowed opacity-50;
+}
+
+.checkbox--input-wrap {
+    @apply relative flex-shrink-0;
+}
+
+/* Hide native input but keep it accessible — inset-0 so it covers the visual control and stays focusable */
+.checkbox--native {
+    @apply absolute inset-0 opacity-0 appearance-none;
+    margin: 0;
+}
+
+.checkbox__control {
+    --checkbox-size:   1rem;
+    --checkbox-color:  var(--color-primary);
+    --checkbox-radius: var(--radius-sm);
+    --checkbox-border: var(--color-gray-400);
+
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    width:            var(--checkbox-size);
+    height:           var(--checkbox-size);
+    border-radius:    var(--checkbox-radius);
+    border:           2px solid var(--checkbox-border);
+    background-color: var(--color-field-bg);
+    transition:       background-color 0.15s ease, border-color 0.15s ease;
+    flex-shrink:      0;
+}
+
+/* Checkmark — always in flow, shown via opacity+scale to avoid layout shifts */
+.checkbox__control::after {
+    content:    "";
+    display:    block;
+    width:      5px;
+    height:     9px;
+    border:     2px solid var(--color-white);
+    border-top: none;
+    border-left: none;
+    transform:  rotate(45deg) translateY(-1px) scale(0);
+    opacity:    0;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+/* Indeterminate dash */
+.checkbox__control.indeterminate::after {
+    width:      8px;
+    height:     0;
+    border:     none;
+    border-top: 2px solid var(--color-white);
+    transform:  scale(1);
+    opacity:    1;
+}
+
+/* Checked + indeterminate states */
+.checkbox--native:checked ~ .checkbox__control,
+.checkbox__control.indeterminate {
+    background-color: var(--checkbox-color);
+    border-color:     var(--checkbox-color);
+}
+
+.checkbox--native:checked ~ .checkbox__control::after {
+    transform: rotate(45deg) translateY(-1px) scale(1);
+    opacity:   1;
+}
+
+/* Focus ring */
+.checkbox--native:focus-visible ~ .checkbox__control {
+    outline:        2px solid var(--checkbox-color);
+    outline-offset: 2px;
+}
+
+/* Error state */
+.checkbox--wrapper.error .checkbox__control {
+    --checkbox-border: var(--color-danger);
+}
+
+.checkbox--label {
+    font-size:   var(--font-size-sm);
+    color:       var(--color-text-primary);
+    line-height: var(--line-height-tight);
+}
+
+.checkbox--error {
+    @apply block;
+    margin-top: var(--spacing-1);
+    font-size:  var(--font-size-xs);
+    color:      var(--color-danger);
+}

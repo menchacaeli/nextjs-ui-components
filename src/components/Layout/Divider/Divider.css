@@ -1,0 +1,34 @@
+.divider {
+    --divider-color:       var(--color-gray-200);
+    --divider-label-color: var(--color-text-secondary);
+}
+
+/* ── Horizontal ───────────────────────────────── */
+.divider--horizontal {
+    @apply flex items-center w-full;
+    gap: var(--spacing-3);
+}
+
+.divider--line {
+    @apply flex-1;
+    height: 1px;
+    background-color: var(--divider-color);
+}
+
+/* Left / right label alignment */
+.divider--left  .divider--line:first-child { display: none; }
+.divider--right .divider--line:last-child  { display: none; }
+
+.divider--label {
+    @apply whitespace-nowrap flex-shrink-0;
+    font-size:   var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color:       var(--divider-label-color);
+}
+
+/* ── Vertical ─────────────────────────────────── */
+.divider--vertical {
+    @apply inline-block self-stretch flex-shrink-0;
+    width:            1px;
+    background-color: var(--divider-color);
+}

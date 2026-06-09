@@ -1,0 +1,156 @@
+.tabs {
+    @apply flex flex-col;
+}
+
+/* ── Tab list ─────────────────────────────────── */
+.tabs__list {
+    @apply flex items-center;
+}
+
+/* ═══════════════════════════════════════════════
+   Underline (default)
+═══════════════════════════════════════════════ */
+.tabs--underline .tabs__list {
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.tabs--underline .tabs__tab {
+    @apply relative inline-flex items-center gap-2;
+    padding:       var(--spacing-3) var(--spacing-4);
+    font-size:     var(--font-size-sm);
+    font-weight:   var(--font-weight-medium);
+    color:         var(--color-text-secondary);
+    border:        none;
+    border-bottom: 2px solid transparent;
+    background:    none;
+    cursor:        pointer;
+    white-space:   nowrap;
+    margin-bottom: -1px;
+    transition:    color 0.15s ease, border-color 0.15s ease;
+}
+
+.tabs--underline .tabs__tab:hover:not(:disabled) { color: var(--color-text-primary); }
+
+.tabs--underline .tabs__tab--active {
+    color:               var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.tabs--underline .tabs__tab:disabled { @apply cursor-not-allowed opacity-40; }
+
+.tabs--underline .tabs__tab:focus-visible {
+    outline:        2px solid var(--color-primary);
+    outline-offset: -2px;
+}
+
+/* ═══════════════════════════════════════════════
+   Pills
+═══════════════════════════════════════════════ */
+.tabs--pills .tabs__list {
+    gap:              var(--spacing-1);
+    padding:          var(--spacing-1);
+    background-color: var(--color-bg-secondary);
+    border-radius:    var(--radius-lg);
+    width:            fit-content;
+}
+
+.tabs--pills .tabs__tab {
+    @apply inline-flex items-center gap-2;
+    padding:       var(--spacing-2) var(--spacing-4);
+    font-size:     var(--font-size-sm);
+    font-weight:   var(--font-weight-medium);
+    color:         var(--color-text-secondary);
+    border:        none;
+    border-radius: var(--radius-md);
+    background:    none;
+    cursor:        pointer;
+    white-space:   nowrap;
+    transition:    color 0.15s ease, background-color 0.15s ease;
+}
+
+.tabs--pills .tabs__tab:hover:not(:disabled) { color: var(--color-text-primary); }
+
+.tabs--pills .tabs__tab--active {
+    background-color: var(--color-bg-primary);
+    color:            var(--color-text-primary);
+    box-shadow:       var(--shadow-sm);
+}
+
+.tabs--pills .tabs__tab:disabled { @apply cursor-not-allowed opacity-40; }
+
+.tabs--pills .tabs__tab:focus-visible {
+    outline:        2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════
+   Bordered
+═══════════════════════════════════════════════ */
+.tabs--bordered .tabs__tab {
+    @apply inline-flex items-center gap-2;
+    padding:       var(--spacing-2) var(--spacing-4);
+    font-size:     var(--font-size-sm);
+    font-weight:   var(--font-weight-medium);
+    color:         var(--color-text-secondary);
+    border:        1px solid var(--color-gray-200);
+    background:    none;
+    cursor:        pointer;
+    white-space:   nowrap;
+    margin-left:   -1px;
+    transition:    color 0.15s ease, background-color 0.15s ease;
+}
+
+.tabs--bordered .tabs__tab:first-child {
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    margin-left:   0;
+}
+
+.tabs--bordered .tabs__tab:last-child {
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.tabs--bordered .tabs__tab:hover:not(:disabled) {
+    background-color: var(--color-bg-secondary);
+    color:            var(--color-text-primary);
+}
+
+.tabs--bordered .tabs__tab--active {
+    background-color: var(--color-primary);
+    border-color:     var(--color-primary);
+    color:            var(--color-white);
+    position:         relative;
+    z-index:          1;
+}
+
+.tabs--bordered .tabs__tab:disabled { @apply cursor-not-allowed opacity-40; }
+
+.tabs--bordered .tabs__tab:focus-visible {
+    outline:        2px solid var(--color-primary);
+    outline-offset: 2px;
+    position:       relative;
+    z-index:        2;
+}
+
+/* ── Badge ─────────────────────────────────────── */
+.tabs__badge {
+    @apply inline-flex items-center justify-center;
+    min-width:        1.25rem;
+    height:           1.25rem;
+    padding:          0 var(--spacing-1);
+    font-size:        var(--font-size-xs);
+    font-weight:      var(--font-weight-medium);
+    border-radius:    var(--radius-full);
+    background-color: var(--color-gray-200);
+    color:            var(--color-text-secondary);
+    transition:       background-color 0.15s ease, color 0.15s ease;
+}
+
+.tabs__tab--active .tabs__badge {
+    background-color: color-mix(in srgb, currentColor 15%, transparent);
+    color:            inherit;
+}
+
+/* ── Panel ─────────────────────────────────────── */
+.tabs__panel {
+    padding-top: var(--spacing-4);
+}

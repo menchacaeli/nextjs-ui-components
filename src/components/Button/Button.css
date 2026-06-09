@@ -1,0 +1,179 @@
+/* ── Base ─────────────────────────────────────────────────── */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 font-medium whitespace-nowrap;
+
+  --btn-bg:     transparent;
+  --btn-color:  inherit;
+  --btn-border: transparent;
+  --btn-radius: var(--radius-base);
+
+  background-color: var(--btn-bg);
+  color:            var(--btn-color);
+  border:           1px solid var(--btn-border);
+  border-radius:    var(--btn-radius);
+  position:         relative;
+  overflow:         hidden;
+  cursor:           pointer;
+  transition:       var(--transition-base);
+}
+
+.btn:hover:not(:disabled) {
+  filter: brightness(88%);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* ── Sizes ────────────────────────────────────────────────── */
+.btn--xs { padding: var(--spacing-1) var(--spacing-2); font-size: var(--font-size-xs); }
+.btn--sm { padding: var(--spacing-1) var(--spacing-3); font-size: var(--font-size-sm); }
+.btn--md { padding: var(--spacing-2) var(--spacing-4); font-size: var(--font-size-sm); }
+.btn--lg { padding: var(--spacing-3) var(--spacing-6); font-size: var(--font-size-base); }
+.btn--xl { padding: var(--spacing-4) var(--spacing-8); font-size: var(--font-size-lg); }
+
+/* ── Shapes ───────────────────────────────────────────────── */
+.btn--default { border-radius: var(--radius-base); }
+.btn--pill    { border-radius: var(--radius-full); }
+.btn--sharp   { border-radius: 0; }
+.btn--rounded { border-radius: var(--radius-lg); }
+
+/* ── Full width ───────────────────────────────────────────── */
+.btn--full { @apply w-full justify-center; }
+
+/* ── Icon-only ────────────────────────────────────────────── */
+.btn--icon-only { gap: 0; }
+.btn--icon-only.btn--xs { @apply w-6  h-6  p-0; }
+.btn--icon-only.btn--sm { @apply w-8  h-8  p-0; }
+.btn--icon-only.btn--md { @apply w-9  h-9  p-0; }
+.btn--icon-only.btn--lg { @apply w-11 h-11 p-0; }
+.btn--icon-only.btn--xl { @apply w-12 h-12 p-0; }
+
+/* ── Filled variants ──────────────────────────────────────── */
+.btn--filled-primary   { --btn-bg: var(--color-primary);   --btn-color: var(--color-white); }
+.btn--filled-secondary { --btn-bg: var(--color-secondary); --btn-color: var(--color-white); }
+.btn--filled-success   { --btn-bg: var(--color-success);   --btn-color: var(--color-white); }
+.btn--filled-danger    { --btn-bg: var(--color-danger);    --btn-color: var(--color-white); }
+.btn--filled-warning   { --btn-bg: var(--color-warning);   --btn-color: var(--color-white); }
+.btn--filled-info      { --btn-bg: var(--color-info);      --btn-color: var(--color-white); }
+.btn--filled-gray      { --btn-bg: var(--color-gray);      --btn-color: var(--color-white); }
+
+/* ── Outlined variants ────────────────────────────────────── */
+.btn--outlined-primary   { --btn-bg: transparent; --btn-color: var(--color-primary);   --btn-border: var(--color-primary);   }
+.btn--outlined-secondary { --btn-bg: transparent; --btn-color: var(--color-secondary); --btn-border: var(--color-secondary); }
+.btn--outlined-success   { --btn-bg: transparent; --btn-color: var(--color-success);   --btn-border: var(--color-success);   }
+.btn--outlined-danger    { --btn-bg: transparent; --btn-color: var(--color-danger);    --btn-border: var(--color-danger);    }
+.btn--outlined-warning   { --btn-bg: transparent; --btn-color: var(--color-warning);   --btn-border: var(--color-warning);   }
+.btn--outlined-info      { --btn-bg: transparent; --btn-color: var(--color-info);      --btn-border: var(--color-info);      }
+.btn--outlined-gray      { --btn-bg: transparent; --btn-color: var(--color-gray);      --btn-border: var(--color-gray);      }
+
+.btn--outlined-primary:hover:not(:disabled),
+.btn--outlined-secondary:hover:not(:disabled),
+.btn--outlined-success:hover:not(:disabled),
+.btn--outlined-danger:hover:not(:disabled),
+.btn--outlined-warning:hover:not(:disabled),
+.btn--outlined-info:hover:not(:disabled),
+.btn--outlined-gray:hover:not(:disabled) {
+  filter: brightness(75%);
+}
+
+/* ── Ghost variants ───────────────────────────────────────── */
+.btn--ghost-primary   { --btn-bg: transparent; --btn-color: var(--color-primary);   }
+.btn--ghost-secondary { --btn-bg: transparent; --btn-color: var(--color-secondary); }
+.btn--ghost-success   { --btn-bg: transparent; --btn-color: var(--color-success);   }
+.btn--ghost-danger    { --btn-bg: transparent; --btn-color: var(--color-danger);    }
+.btn--ghost-warning   { --btn-bg: transparent; --btn-color: var(--color-warning);   }
+.btn--ghost-info      { --btn-bg: transparent; --btn-color: var(--color-info);      }
+.btn--ghost-gray      { --btn-bg: transparent; --btn-color: var(--color-gray);      }
+
+.btn--ghost-primary:hover:not(:disabled),
+.btn--ghost-secondary:hover:not(:disabled),
+.btn--ghost-success:hover:not(:disabled),
+.btn--ghost-danger:hover:not(:disabled),
+.btn--ghost-warning:hover:not(:disabled),
+.btn--ghost-info:hover:not(:disabled),
+.btn--ghost-gray:hover:not(:disabled) {
+  filter: none;
+  background-color: var(--color-bg-secondary);
+}
+
+/* ── Gradient variants ────────────────────────────────────── */
+.btn--gradient-primary   { background: linear-gradient(90deg, var(--color-primary),   var(--color-blue-400));   --btn-color: var(--color-white); }
+.btn--gradient-secondary { background: linear-gradient(90deg, var(--color-secondary), var(--color-purple-400)); --btn-color: var(--color-white); }
+.btn--gradient-success   { background: linear-gradient(90deg, var(--color-success),   var(--color-green-400));  --btn-color: var(--color-white); }
+.btn--gradient-danger    { background: linear-gradient(90deg, var(--color-danger),    var(--color-red-400));    --btn-color: var(--color-white); }
+.btn--gradient-warning   { background: linear-gradient(90deg, var(--color-warning),   var(--color-amber-400));  --btn-color: var(--color-white); }
+.btn--gradient-info      { background: linear-gradient(90deg, var(--color-info),      var(--color-cyan-400));   --btn-color: var(--color-white); }
+
+.btn--gradient-primary:hover:not(:disabled),
+.btn--gradient-secondary:hover:not(:disabled),
+.btn--gradient-success:hover:not(:disabled),
+.btn--gradient-danger:hover:not(:disabled),
+.btn--gradient-warning:hover:not(:disabled),
+.btn--gradient-info:hover:not(:disabled) {
+  filter: brightness(88%);
+}
+
+/* ── Scale animation ──────────────────────────────────────── */
+.btn--scale:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+/* ── Ripple animation ─────────────────────────────────────── */
+.btn--ripple {
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple {
+  position: absolute;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: btn-ripple 0.75s ease-out;
+}
+
+/* ── Loading ──────────────────────────────────────────────── */
+.btn--loading {
+  opacity: 0.75;
+  cursor: wait;
+  pointer-events: none;
+}
+
+/* ── Spinner ──────────────────────────────────────────────── */
+.btn__spinner {
+  @apply shrink-0 rounded-full;
+  width:  1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: btn-spin 0.65s linear infinite;
+}
+
+/* ── Icon wrapper ─────────────────────────────────────────── */
+.btn__icon {
+  @apply inline-flex items-center justify-center shrink-0;
+  width:  1.25em;
+  height: 1.25em;
+}
+
+.btn__icon > svg {
+  width:  100%;
+  height: 100%;
+}
+
+/* ── Keyframes ────────────────────────────────────────────── */
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes btn-ripple {
+  0%   { width: 0; height: 0; opacity: 0.5; transform: translate(-50%, -50%) scale(0); }
+  100% { width: 500px; height: 500px; opacity: 0; transform: translate(-50%, -50%) scale(1); }
+}

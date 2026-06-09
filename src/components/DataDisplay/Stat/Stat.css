@@ -1,0 +1,45 @@
+.stat {
+    @apply flex flex-col;
+    gap: var(--spacing-1);
+}
+
+.stat--icon-wrap {
+    @apply inline-flex items-center justify-center flex-shrink-0;
+    width:            2.5rem;
+    height:           2.5rem;
+    border-radius:    var(--radius-md);
+    background-color: var(--color-bg-secondary);
+    color:            var(--color-primary);
+    margin-bottom:    var(--spacing-2);
+}
+
+.stat--label {
+    @apply block;
+    font-size:   var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color:       var(--color-text-secondary);
+}
+
+.stat--value {
+    @apply block;
+    font-size:   var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color:       var(--color-text-primary);
+    line-height: var(--line-height-tight);
+}
+
+.stat--delta {
+    @apply inline-flex items-center gap-1;
+    font-size:   var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    margin-top:  var(--spacing-1);
+}
+
+.stat--delta-up      { color: var(--color-success); }
+.stat--delta-down    { color: var(--color-danger); }
+.stat--delta-neutral { color: var(--color-text-secondary); }
+
+.stat--delta-label {
+    color:       var(--color-text-secondary);
+    font-weight: var(--font-weight-normal);
+}

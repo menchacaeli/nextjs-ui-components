@@ -1,0 +1,103 @@
+.switch--wrapper {
+    @apply inline-flex items-center gap-3 cursor-pointer select-none;
+}
+
+.switch--wrapper.disabled {
+    @apply cursor-not-allowed opacity-50;
+}
+
+.switch--wrapper.label-left { flex-direction: row-reverse; }
+
+.switch--input-wrap {
+    position:    relative;
+    display:     inline-flex;
+    flex-shrink: 0;
+}
+
+/* Hide native input but keep it accessible — inset-0 so it covers the track and stays focusable */
+.switch--native {
+    @apply absolute inset-0 opacity-0 appearance-none;
+    margin: 0;
+}
+
+.switch__track {
+    --switch-track-on:  var(--color-primary);
+    --switch-track-off: var(--color-gray-300);
+    --switch-thumb:     var(--color-white);
+
+    position:         relative;
+    display:          inline-flex;
+    align-items:      center;
+    background-color: var(--switch-track-off);
+    border-radius:    var(--radius-full);
+    transition:       background-color 0.2s ease;
+    flex-shrink:      0;
+}
+
+/* Thumb */
+.switch__track::after {
+    content:          "";
+    display:          block;
+    background-color: var(--switch-thumb);
+    border-radius:    50%;
+    box-shadow:       var(--shadow-sm);
+    transition:       transform 0.2s ease;
+    flex-shrink:      0;
+}
+
+/* Checked state */
+.switch--native:checked ~ .switch__track {
+    background-color: var(--switch-track-on);
+}
+
+/* Focus ring */
+.switch--native:focus-visible ~ .switch__track {
+    outline:        2px solid var(--switch-track-on);
+    outline-offset: 2px;
+}
+
+/* ── Sizes ────────────────────────────────────── */
+.switch--sm .switch__track {
+    width:  2rem;   /* 32px */
+    height: 1.125rem; /* 18px */
+    padding: 0 2px;
+}
+.switch--sm .switch__track::after {
+    width:  0.875rem; /* 14px */
+    height: 0.875rem;
+}
+.switch--sm .switch--native:checked ~ .switch__track::after {
+    transform: translateX(0.875rem);
+}
+
+.switch--md .switch__track {
+    width:  2.75rem; /* 44px */
+    height: 1.5rem;  /* 24px */
+    padding: 0 2px;
+}
+.switch--md .switch__track::after {
+    width:  1.25rem; /* 20px */
+    height: 1.25rem;
+}
+.switch--md .switch--native:checked ~ .switch__track::after {
+    transform: translateX(1.25rem);
+}
+
+.switch--lg .switch__track {
+    width:  3.5rem;  /* 56px */
+    height: 1.875rem; /* 30px */
+    padding: 0 3px;
+}
+.switch--lg .switch__track::after {
+    width:  1.5rem;  /* 24px — slightly smaller than track height for padding */
+    height: 1.5rem;
+}
+.switch--lg .switch--native:checked ~ .switch__track::after {
+    transform: translateX(1.625rem);
+}
+
+.switch--label {
+    font-size:   var(--font-size-sm);
+    color:       var(--color-text-primary);
+    line-height: var(--line-height-tight);
+}
