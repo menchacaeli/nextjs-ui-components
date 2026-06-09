@@ -1,0 +1,146 @@
+.listbox {
+    @apply flex flex-col;
+    gap: var(--spacing-1);
+}
+
+/* ── Label ────────────────────────────────────── */
+.listbox--label {
+    font-size:   var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color:       var(--color-text-primary);
+}
+
+.listbox--label.required::after {
+    content:     "*";
+    color:       var(--color-danger);
+    margin-left: var(--spacing-1);
+}
+
+/* ── Trigger button ───────────────────────────── */
+.listbox--button {
+    @apply relative flex items-center justify-between w-full;
+    --listbox-border: var(--color-field-border);
+
+    padding:          var(--spacing-2) var(--spacing-3);
+    font-size:        var(--font-size-sm);
+    color:            var(--color-text-primary);
+    background-color: var(--color-field-bg);
+    border:           1px solid var(--listbox-border);
+    border-radius:    var(--radius-md);
+    cursor:           pointer;
+    text-align:       left;
+    transition:       border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.listbox--button:hover:not(:disabled) {
+    --listbox-border: var(--color-gray-400);
+}
+
+.listbox--button:focus-visible {
+    outline:    none;
+    --listbox-border: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+.listbox--button.error {
+    --listbox-border: var(--color-danger);
+}
+
+.listbox--button.error:focus-visible {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-danger) 25%, transparent);
+}
+
+.listbox--button.disabled,
+.listbox--button:disabled {
+    @apply cursor-not-allowed opacity-60;
+    background-color: var(--color-field-bg-disabled);
+}
+
+/* ── Trigger content ──────────────────────────── */
+.listbox--value {
+    @apply flex items-center gap-2 truncate;
+    flex: 1;
+}
+
+.listbox--value.placeholder { color: var(--color-gray-400); }
+
+.listbox--chevron {
+    @apply flex items-center flex-shrink-0;
+    color:      var(--color-gray-400);
+    margin-left: var(--spacing-2);
+    transition: transform 0.15s ease;
+}
+
+.listbox--chevron.open { transform: rotate(180deg); }
+
+/* ── Dropdown panel ───────────────────────────── */
+.listbox--dropdown {
+    background-color: var(--color-field-bg);
+    border:           1px solid var(--color-gray-200);
+    border-radius:    var(--radius-lg);
+    box-shadow:       var(--shadow-lg);
+    padding:          var(--spacing-1);
+    z-index:          var(--z-dropdown);
+    max-height:       16rem;
+    overflow-y:       auto;
+    outline:          none;
+    list-style:       none;
+    margin:           0;
+}
+
+/* ── Options ──────────────────────────────────── */
+.listbox--option {
+    @apply flex items-center gap-2 w-full;
+    padding:       var(--spacing-2) var(--spacing-3);
+    font-size:     var(--font-size-sm);
+    color:         var(--color-text-primary);
+    border-radius: var(--radius-base);
+    cursor:        pointer;
+    transition:    background-color 0.1s ease;
+    list-style:    none;
+}
+
+.listbox--option:hover:not(.disabled),
+.listbox--option.highlighted:not(.disabled) {
+    background-color: var(--color-bg-secondary);
+}
+
+.listbox--option.selected {
+    color:       var(--color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.listbox--option.disabled {
+    @apply cursor-not-allowed opacity-50;
+}
+
+.listbox--option-icon {
+    @apply flex items-center justify-center flex-shrink-0;
+    width:  1.125rem;
+    height: 1.125rem;
+    color:  var(--color-gray-400);
+}
+
+.listbox--option.selected .listbox--option-icon { color: var(--color-primary); }
+
+.listbox--option-text {
+    @apply flex flex-col flex-1 truncate;
+}
+
+.listbox--option-desc {
+    font-size: var(--font-size-xs);
+    color:     var(--color-text-secondary);
+    font-weight: var(--font-weight-normal);
+}
+
+.listbox--check {
+    @apply flex items-center flex-shrink-0;
+    margin-left: auto;
+    color:       var(--color-primary);
+}
+
+/* ── Error text ───────────────────────────────── */
+.listbox--error {
+    font-size: var(--font-size-xs);
+    color:     var(--color-danger);
+}

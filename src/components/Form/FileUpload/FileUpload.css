@@ -1,0 +1,133 @@
+.file-upload {
+    @apply flex flex-col;
+    gap: var(--spacing-1);
+}
+
+.file-upload--label-text {
+    font-size:   var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color:       var(--color-text-primary);
+}
+
+/* ── Drop zone ────────────────────────────────── */
+.file-upload--zone {
+    @apply relative flex flex-col items-center justify-center;
+    --zone-border: var(--color-gray-300);
+    padding:          var(--spacing-8) var(--spacing-6);
+    border:           2px dashed var(--zone-border);
+    border-radius:    var(--radius-lg);
+    background-color: var(--color-bg-primary);
+    cursor:           pointer;
+    text-align:       center;
+    transition:       border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.file-upload--zone:hover:not(.disabled),
+.file-upload--zone:focus-visible:not(.disabled) {
+    --zone-border:    var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 3%, var(--color-bg-primary));
+    outline:          none;
+}
+
+.file-upload--zone.dragging {
+    --zone-border:    var(--color-primary);
+    background-color: color-mix(in srgb, var(--color-primary) 5%, var(--color-bg-primary));
+}
+
+.file-upload--zone.has-error { --zone-border: var(--color-danger); }
+
+.file-upload--zone.disabled { @apply cursor-not-allowed opacity-60; }
+
+.file-upload--input {
+    @apply absolute inset-0 opacity-0;
+    cursor: pointer;
+    width:  100%;
+    height: 100%;
+}
+
+.file-upload--input:disabled { cursor: not-allowed; }
+
+.file-upload--zone-icon {
+    color:         var(--color-gray-400);
+    margin-bottom: var(--spacing-3);
+    transition:    color 0.15s ease;
+}
+
+.file-upload--zone:hover .file-upload--zone-icon,
+.file-upload--zone.dragging .file-upload--zone-icon {
+    color: var(--color-primary);
+}
+
+.file-upload--zone-text {
+    font-size: var(--font-size-sm);
+    color:     var(--color-text-secondary);
+    margin:    0;
+}
+
+.file-upload--zone-text strong {
+    color:       var(--color-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.file-upload--zone-hint {
+    margin-top: var(--spacing-1);
+    font-size:  var(--font-size-xs);
+    color:      var(--color-text-secondary);
+}
+
+.file-upload--error-text {
+    font-size: var(--font-size-xs);
+    color:     var(--color-danger);
+}
+
+/* ── File list ────────────────────────────────── */
+.file-upload--list {
+    @apply flex flex-col;
+    gap:        var(--spacing-2);
+    margin-top: var(--spacing-3);
+    list-style: none;
+    padding:    0;
+}
+
+.file-upload--file {
+    @apply flex items-center gap-3;
+    padding:          var(--spacing-2) var(--spacing-3);
+    border-radius:    var(--radius-md);
+    border:           1px solid var(--color-gray-200);
+    background-color: var(--color-bg-secondary);
+}
+
+.file-upload--file-icon { @apply flex-shrink-0; color: var(--color-primary); }
+
+.file-upload--file-info { @apply flex-1 min-w-0; }
+
+.file-upload--file-name {
+    @apply block truncate;
+    font-size:   var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color:       var(--color-text-primary);
+}
+
+.file-upload--file-size {
+    @apply block;
+    font-size: var(--font-size-xs);
+    color:     var(--color-text-secondary);
+}
+
+.file-upload--file-remove {
+    @apply flex items-center justify-center flex-shrink-0;
+    width:         1.5rem;
+    height:        1.5rem;
+    border:        none;
+    background:    none;
+    cursor:        pointer;
+    border-radius: var(--radius-sm);
+    color:         var(--color-text-secondary);
+    padding:       0;
+    transition:    color 0.15s ease, background-color 0.15s ease;
+}
+
+.file-upload--file-remove:hover {
+    color:            var(--color-danger);
+    background-color: color-mix(in srgb, var(--color-danger) 10%, transparent);
+}

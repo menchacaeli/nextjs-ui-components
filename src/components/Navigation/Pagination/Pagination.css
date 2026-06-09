@@ -1,0 +1,54 @@
+.pagination {
+    @apply flex items-center;
+    gap: var(--spacing-1);
+}
+
+.pagination__btn {
+    @apply inline-flex items-center justify-center;
+    min-width:     2rem;
+    height:        2rem;
+    padding:       0 var(--spacing-2);
+    font-size:     var(--font-size-sm);
+    font-weight:   var(--font-weight-medium);
+    border-radius: var(--radius-md);
+    border:        1px solid transparent;
+    background:    none;
+    color:         var(--color-text-secondary);
+    cursor:        pointer;
+    white-space:   nowrap;
+    transition:    background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.pagination__btn:hover:not(:disabled) {
+    background-color: var(--color-bg-secondary);
+    color:            var(--color-text-primary);
+}
+
+.pagination__btn--active {
+    background-color: var(--color-primary);
+    border-color:     var(--color-primary);
+    color:            var(--color-white);
+}
+
+.pagination__btn--active:hover:not(:disabled) {
+    background-color: var(--color-blue-600);
+    border-color:     var(--color-blue-600);
+    color:            var(--color-white);
+}
+
+.pagination__btn:disabled {
+    @apply cursor-not-allowed opacity-40;
+}
+
+.pagination__btn:focus-visible {
+    outline:        2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.pagination__ellipsis {
+    @apply inline-flex items-center justify-center;
+    width:     2rem;
+    height:    2rem;
+    font-size: var(--font-size-sm);
+    color:     var(--color-text-secondary);
+}

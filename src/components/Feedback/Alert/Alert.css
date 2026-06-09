@@ -1,0 +1,65 @@
+.alert {
+    @apply flex items-start gap-3;
+    --alert-bg:     var(--color-blue-50);
+    --alert-border: var(--color-blue-200);
+    --alert-color:  var(--color-blue-700);
+    --alert-icon:   var(--color-blue-500);
+
+    padding:          var(--spacing-4);
+    border-radius:    var(--radius-md);
+    border:           1px solid var(--alert-border);
+    background-color: var(--alert-bg);
+    color:            var(--alert-color);
+}
+
+.alert--info    { --alert-bg: var(--color-blue-50);   --alert-border: var(--color-blue-200);   --alert-color: var(--color-blue-700);   --alert-icon: var(--color-blue-500); }
+.alert--success { --alert-bg: var(--color-green-50);  --alert-border: var(--color-green-200);  --alert-color: var(--color-green-700);  --alert-icon: var(--color-green-600); }
+.alert--warning { --alert-bg: var(--color-amber-50);  --alert-border: var(--color-amber-200);  --alert-color: var(--color-amber-700);  --alert-icon: var(--color-amber-500); }
+.alert--error   { --alert-bg: var(--color-red-50);    --alert-border: var(--color-red-200);    --alert-color: var(--color-red-700);    --alert-icon: var(--color-red-500); }
+
+.alert--icon {
+    @apply flex-shrink-0;
+    color:      var(--alert-icon);
+    margin-top: 1px;
+}
+
+.alert--body {
+    @apply flex-1 min-w-0;
+}
+
+.alert--title {
+    @apply block;
+    font-size:     var(--font-size-sm);
+    font-weight:   var(--font-weight-semibold);
+    margin-bottom: var(--spacing-1);
+}
+
+.alert--content {
+    font-size:   var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+}
+
+.alert--dismiss {
+    @apply flex-shrink-0 flex items-center justify-center;
+    width:         1.5rem;
+    height:        1.5rem;
+    border-radius: var(--radius-base);
+    border:        none;
+    background:    none;
+    cursor:        pointer;
+    color:         var(--alert-color);
+    opacity:       0.7;
+    padding:       0;
+    transition:    opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.alert--dismiss:hover {
+    opacity:          1;
+    background-color: color-mix(in srgb, var(--alert-color) 10%, transparent);
+}
+
+.alert--dismiss:focus-visible {
+    outline:        2px solid var(--alert-icon);
+    outline-offset: 2px;
+    opacity:        1;
+}

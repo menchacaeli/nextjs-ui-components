@@ -1,0 +1,33 @@
+.skeleton {
+    --skeleton-bg: var(--color-gray-200);
+    @apply animate-pulse;
+    background-color: var(--skeleton-bg);
+}
+
+.skeleton--rectangular {
+    @apply block;
+    border-radius: var(--radius-base);
+}
+
+.skeleton--circular {
+    @apply block flex-shrink-0;
+    border-radius: var(--radius-full);
+}
+
+.skeleton--text-wrap {
+    @apply flex flex-col;
+    gap: var(--spacing-2);
+}
+
+.skeleton--text-line {
+    @apply animate-pulse block;
+    height:           0.875rem;
+    background-color: var(--skeleton-bg);
+    border-radius:    var(--radius-full);
+    width:            100%;
+}
+
+/* Last line shorter — mimics real text */
+.skeleton--text-line:last-child:not(:only-child) {
+    width: 75%;
+}

@@ -1,0 +1,68 @@
+.accordion {
+    --accordion-border: var(--color-gray-200);
+    border:        1px solid var(--accordion-border);
+    border-radius: var(--radius-lg);
+    overflow:      hidden;
+}
+
+.accordion__item {
+    border-top: 1px solid var(--accordion-border);
+}
+
+.accordion__item:first-child { border-top: none; }
+
+.accordion__trigger {
+    @apply flex w-full items-center justify-between;
+    padding:     var(--spacing-4) var(--spacing-6);
+    font-size:   var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color:       var(--color-text-primary);
+    background:  none;
+    border:      none;
+    cursor:      pointer;
+    text-align:  left;
+    transition:  background-color 0.15s ease;
+}
+
+.accordion__trigger:hover:not(:disabled) {
+    background-color: var(--color-bg-secondary);
+}
+
+.accordion__trigger:focus-visible {
+    outline:        2px solid var(--color-primary);
+    outline-offset: -2px;
+}
+
+.accordion__trigger:disabled { @apply cursor-not-allowed opacity-50; }
+
+.accordion__icon {
+    @apply flex-shrink-0;
+    color:      var(--color-text-secondary);
+    transition: transform 0.25s ease;
+}
+
+.accordion__item--open .accordion__icon {
+    transform: rotate(180deg);
+}
+
+/* CSS grid trick — smooth height animation without a magic max-height */
+.accordion__body {
+    display:    grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.25s ease;
+}
+
+.accordion__item--open .accordion__body {
+    grid-template-rows: 1fr;
+}
+
+.accordion__inner {
+    overflow: hidden;
+}
+
+.accordion__content {
+    padding:     0 var(--spacing-6) var(--spacing-4);
+    font-size:   var(--font-size-sm);
+    color:       var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+}

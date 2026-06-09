@@ -1,0 +1,93 @@
+.select--container {
+    @apply flex flex-col w-full;
+    margin-bottom: var(--spacing-1);
+}
+
+.select--label {
+    @apply font-medium select-none;
+    font-size:     var(--font-size-sm);
+    color:         var(--color-text-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.select--label.required::after {
+    content:     "*";
+    color:       var(--color-danger);
+    margin-left: var(--spacing-1);
+}
+
+.select--wrapper {
+    @apply relative flex items-center;
+}
+
+.select--field {
+    @apply block w-full appearance-none;
+
+    --select-border:     var(--color-gray-300);
+    --select-focus-ring: color-mix(in srgb, var(--color-primary) 25%, transparent);
+
+    padding:          var(--font-size-2xs) var(--spacing-8) var(--font-size-2xs) var(--font-size-xs);
+    font-size:        var(--font-size-sm);
+    line-height:      var(--line-height-tight);
+    color:            var(--color-text-primary);
+    background-color: var(--color-field-bg);
+    background-clip:  padding-box;
+    border:           1px solid var(--select-border);
+    border-radius:    var(--radius-md);
+    cursor:           pointer;
+    transition:       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.select--field:focus {
+    border-color: var(--color-primary);
+    outline:      0;
+    box-shadow:   0 0 0 3px var(--select-focus-ring);
+}
+
+.select--field:disabled {
+    background-color: var(--color-field-bg-disabled);
+    opacity:          0.65;
+    cursor:           not-allowed;
+}
+
+.select--field.error {
+    --select-border: var(--color-danger);
+    color:           var(--color-danger);
+}
+
+.select--field.error:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-danger) 25%, transparent);
+}
+
+.select--field.success {
+    --select-border: var(--color-success);
+    color:           var(--color-success);
+}
+
+.select--field.success:focus {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-success) 25%, transparent);
+}
+
+.select--chevron {
+    @apply absolute pointer-events-none;
+    right: var(--spacing-3);
+    color: var(--color-gray-400);
+    width:  1rem;
+    height: 1rem;
+}
+
+.select--field:disabled ~ .select--chevron {
+    opacity: 0.5;
+}
+
+.select--message {
+    margin-top: var(--spacing-2);
+    font-size:  var(--font-size-sm);
+}
+
+.select--message.error   { color: var(--color-danger); }
+.select--message.success { color: var(--color-success); }
+
+@media (min-width: 640px) {
+    .select--field { font-size: var(--font-size-base); }
+}

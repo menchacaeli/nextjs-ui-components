@@ -1,0 +1,50 @@
+.card {
+    --card-border: var(--color-gray-200);
+    --card-bg:     var(--color-bg-primary);
+    --card-radius: var(--radius-lg);
+
+    background-color: var(--card-bg);
+    border-radius:    var(--card-radius);
+    overflow:         hidden;
+}
+
+.card--bordered { border: 1px solid var(--card-border); }
+
+.card--shadow-sm  { box-shadow: var(--shadow-sm); }
+.card--shadow-md  { box-shadow: var(--shadow-md); }
+.card--shadow-lg  { box-shadow: var(--shadow-lg); }
+
+.card--padding-sm  { padding: var(--spacing-3); }
+.card--padding-md  { padding: var(--spacing-4) var(--spacing-6); }
+.card--padding-lg  { padding: var(--spacing-8); }
+
+/* ── Sub-sections ─────────────────────────────── */
+.card__header {
+    @apply flex items-center justify-between;
+    padding:       var(--spacing-4) var(--spacing-6);
+    border-bottom: 1px solid var(--card-border);
+}
+
+.card__header-title {
+    font-size:   var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color:       var(--color-text-primary);
+}
+
+.card__header-description {
+    font-size:  var(--font-size-sm);
+    color:      var(--color-text-secondary);
+    margin-top: var(--spacing-1);
+}
+
+.card__body {
+    padding: var(--spacing-6);
+}
+
+.card__footer {
+    @apply flex items-center justify-end;
+    padding:    var(--spacing-4) var(--spacing-6);
+    border-top: 1px solid var(--card-border);
+    gap:        var(--spacing-3);
+    background-color: var(--color-bg-secondary);
+}

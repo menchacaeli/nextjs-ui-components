@@ -1,0 +1,11 @@
+.spinner {
+    --spinner-color:       var(--color-primary);
+    --spinner-track-color: var(--color-gray-200);
+    @apply inline-block animate-spin flex-shrink-0;
+}
+
+.spinner--xs { width: 0.875rem; height: 0.875rem; }
+.spinner--sm { width: 1.125rem; height: 1.125rem; }
+.spinner--md { width: 1.5rem;   height: 1.5rem; }
+.spinner--lg { width: 2rem;     height: 2rem; }
+.spinner--xl { width: 2.5rem;   height: 2.5rem; }

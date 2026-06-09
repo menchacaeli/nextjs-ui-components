@@ -1,0 +1,91 @@
+.radio--wrapper {
+    @apply inline-flex items-center gap-2 cursor-pointer select-none;
+}
+
+.radio--wrapper.disabled {
+    @apply cursor-not-allowed opacity-50;
+}
+
+/* Hide native input but keep it accessible — inset-0 so it covers the visual control and stays focusable */
+.radio--native {
+    @apply absolute inset-0 opacity-0 appearance-none;
+    margin: 0;
+}
+
+.radio__control {
+    --radio-size:  1rem;
+    --radio-color: var(--color-primary);
+    --radio-border: var(--color-gray-400);
+
+    position:         relative;
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    width:            var(--radio-size);
+    height:           var(--radio-size);
+    border-radius:    50%;
+    border:           2px solid var(--radio-border);
+    background-color: var(--color-field-bg);
+    transition:       border-color 0.15s ease, background-color 0.15s ease;
+    flex-shrink:      0;
+}
+
+/* Inner dot — hidden by default */
+.radio__control::after {
+    content:          "";
+    width:            0.375rem; /* 6px */
+    height:           0.375rem;
+    border-radius:    50%;
+    background-color: var(--color-white);
+    transform:        scale(0);
+    transition:       transform 0.15s ease;
+}
+
+/* Checked state */
+.radio--native:checked ~ .radio__control {
+    background-color: var(--radio-color);
+    border-color:     var(--radio-color);
+}
+
+.radio--native:checked ~ .radio__control::after {
+    transform: scale(1);
+}
+
+/* Focus ring */
+.radio--native:focus-visible ~ .radio__control {
+    outline:        2px solid var(--radio-color);
+    outline-offset: 2px;
+}
+
+.radio--label {
+    font-size:   var(--font-size-sm);
+    color:       var(--color-text-primary);
+    line-height: var(--line-height-tight);
+}
+
+/* ── RadioGroup ─────────────────────────────── */
+.radio-group {
+    @apply flex flex-col;
+    gap: var(--spacing-1);
+}
+
+.radio-group--label {
+    @apply font-medium;
+    font-size:     var(--font-size-sm);
+    color:         var(--color-text-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.radio-group--options {
+    display: flex;
+    gap:     var(--spacing-4);
+}
+
+.radio-group--options.vertical   { flex-direction: column; gap: var(--spacing-3); }
+.radio-group--options.horizontal { flex-direction: row;    flex-wrap: wrap; }
+
+.radio-group--error {
+    margin-top: var(--spacing-1);
+    font-size:  var(--font-size-xs);
+    color:      var(--color-danger);
+}
