@@ -1,0 +1,13 @@
+{
+  "name": "@em-ui/tokens",
+  "version": "0.1.0",
+  "description": "Shared design tokens for the em-ui design system",
+  "private": false,
+  "type": "module",
+  "exports": {
+    "./styles": "./src/styles/globals.css",
+    "./theme": "./src/styles/theme.css"
+  },
+  "files": ["src/styles"],
+  "sideEffects": ["**/*.css"]
+}
