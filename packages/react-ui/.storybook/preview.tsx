@@ -1,7 +1,7 @@
 import type { Preview, Decorator } from '@storybook/nextjs-vite'
 import { useEffect } from 'react'
-import '../src/styles/globals.css'
-import '../src/styles/theme.css'
+import '@em-ui/tokens/styles'
+import '@em-ui/tokens/theme'
 
 const withTheme: Decorator = (Story, context) => {
   const theme = context.globals.theme ?? 'light'

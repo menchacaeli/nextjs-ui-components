@@ -13,8 +13,6 @@ const config: StorybookConfig = {
     "@storybook/addon-mcp"
   ],
   "framework": "@storybook/nextjs-vite",
-  "staticDirs": [
-    "../public"
-  ]
+  "staticDirs": []
 };
 export default config;
