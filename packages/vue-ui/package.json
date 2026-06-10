@@ -20,9 +20,12 @@
   "scripts": {
     "build:lib": "vite build --config vite.lib.config.ts",
     "type-check": "vue-tsc --project tsconfig.lib.json --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage"
+    "test": "vitest run --project=unit",
+    "test:watch": "vitest --project=unit",
+    "test:coverage": "vitest run --project=unit --coverage",
+    "test:all": "vitest run",
+    "storybook": "storybook dev -p 6008",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
@@ -31,10 +34,18 @@
     "@em-ui/tokens": "workspace:*"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^5.2.1",
+    "@storybook/addon-a11y": "^10.4.3",
+    "@storybook/addon-docs": "^10.4.3",
+    "@storybook/addon-vitest": "^10.4.3",
+    "@storybook/vue3-vite": "^10.4.3",
     "@vitejs/plugin-vue": "^6.0.7",
-    "@vue/test-utils": "^2.4.6",
+    "@vitest/browser-playwright": "^4.1.8",
     "@vitest/coverage-v8": "^4.1.8",
+    "@vue/test-utils": "^2.4.6",
     "jsdom": "^27.0.1",
+    "playwright": "^1.52.0",
+    "storybook": "^10.4.3",
     "typescript": "^5",
     "vite": "^8.0.16",
     "vite-plugin-dts": "^5.0.2",
